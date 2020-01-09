@@ -1,27 +1,55 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import store from "@/store";
+
+import Layout from '@/components/Layout'
+import routeList from "./route.json"
 
 Vue.use(VueRouter)
 
-const routes = [
+const vueRoutes = routeList.map(route => Object.assign({
+  path: route.path,
+  name: route.name,
+  component: () => import(`@/views/${route.name}`),
+  meta: route.meta || {}
+}))
+
+export const allRoutes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    component: Layout,
+    redirect: '/get-start',
+    children: [
+      ...vueRoutes,
+    ],
   },
+
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '*',
+    redirect: '/404',
+  },
 ]
 
 const router = new VueRouter({
-  routes
+  routes: allRoutes,
+})
+
+
+router.beforeEach( async (to, from, next) => {
+  try {
+    // await store.dispatch('app/SET_ALL_MENU', { allMenu })
+
+    const isOK = false
+    if (isOK) {
+      next('/')
+    } else {
+      next()
+    }
+
+  } catch (e) {
+    console.log(e)
+    next('/')
+  }
 })
 
 export default router

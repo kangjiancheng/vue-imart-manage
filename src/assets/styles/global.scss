@@ -1,0 +1,73 @@
+@import "./base";
+html {
+  height: 100%;
+}
+body {
+  min-width: 1366px;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  background-color: #f9f9fb;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+div, span {
+  outline: none;
+}
+
+.page-view {
+  padding: 30px;
+}
+
+.box-view {
+  padding: 30px;
+  background-color: white;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+
+.flow-card {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 40px 0 rgba(4,4,64,0.04);
+  border-radius: 5px;
+}
+
+.theme-icon {
+  font-size: 100px;
+  color: theme-color();
+}
+
+.tron-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+

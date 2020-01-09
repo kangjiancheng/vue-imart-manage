@@ -1,0 +1,16 @@
+[
+  {
+    "path": "/get-start",
+    "name": "get-start",
+    "title": "menu.name.getStart",
+    "icon": "el-icon-guide",
+    "isAuth": true
+  },
+  {
+    "path": "/node-list",
+    "name": "node-list",
+    "title": "menu.name.nodeList",
+    "icon": "el-icon-s-operation",
+    "isAuth": true
+  },
+]

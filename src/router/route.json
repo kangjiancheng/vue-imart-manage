@@ -1,0 +1,29 @@
+[
+  {
+    "path": "/get-start",
+    "name": "get-start"
+  },
+  {
+    "path": "/node-list",
+    "name": "node-list"
+  },
+  {
+    "path": "/config-manage",
+    "name": "config-manage"
+  },
+  {
+    "path": "/import-plugin",
+    "name": "import-plugin"
+  },
+  {
+    "path": "/deploy-nodes",
+    "name": "deploy-nodes"
+  },
+  {
+    "path": "/404",
+    "name": "404",
+    "meta": {
+      "hideAside": true
+    }
+  }
+]

@@ -1,0 +1,11 @@
+$media1680: 1680px;
+
+@function error-color($alpha: 1) {
+  @return rgba(245, 108, 108, $alpha)
+}
+
+@function theme-color($alpha: 1) {
+  //@return rgba(197, 49, 40, $alpha)
+  //@return rgba(56, 106, 246, $alpha)
+  @return rgba(64, 158, 255, $alpha)
+}
