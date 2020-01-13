@@ -1,5 +1,5 @@
 <template>
-  <div class="app-wrapper">
+  <div class="app-view">
     <div class="app-header">
       <header-nav />
     </div>
@@ -32,7 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-wrapper {
+.app-view {
   .app-header {
     position: relative;
     z-index: 1;

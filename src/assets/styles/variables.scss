@@ -1,0 +1,9 @@
+// global variable
+$warning-color: red;
+
+@function theme-color($alpha: 1) {
+  //@return rgba(197, 49, 40, $alpha)
+  //@return rgba(56, 106, 246, $alpha)
+  @return rgba(64, 158, 255, $alpha)
+}
+

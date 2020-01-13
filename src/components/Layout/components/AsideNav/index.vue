@@ -62,7 +62,7 @@ export default {
       overflow: auto;
     }
 
-    /deep/ .el-menu-item{
+    >>> .el-menu-item{
       font-size: 16px;
       color: #666;
       border-left: 4px solid transparent;

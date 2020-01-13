@@ -1,11 +1,36 @@
-$media1680: 1680px;
-
-@function error-color($alpha: 1) {
-  @return rgba(245, 108, 108, $alpha)
+html {
+  height: 100%;
+}
+body {
+  min-width: 1366px;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  background-color: #f9f9fb;
 }
 
-@function theme-color($alpha: 1) {
-  //@return rgba(197, 49, 40, $alpha)
-  //@return rgba(56, 106, 246, $alpha)
-  @return rgba(64, 158, 255, $alpha)
+html, body, p, h1, h2, h3, h4, h5, h6, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+div, span {
+  outline: none;
 }

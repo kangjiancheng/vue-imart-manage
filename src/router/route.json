@@ -1,23 +1,11 @@
 [
   {
-    "path": "/get-start",
-    "name": "get-start"
+    "path": "/home",
+    "name": "home"
   },
   {
-    "path": "/node-list",
-    "name": "node-list"
-  },
-  {
-    "path": "/config-manage",
-    "name": "config-manage"
-  },
-  {
-    "path": "/import-plugin",
-    "name": "import-plugin"
-  },
-  {
-    "path": "/deploy-nodes",
-    "name": "deploy-nodes"
+    "path": "/about",
+    "name": "about"
   },
   {
     "path": "/404",
