@@ -1,15 +1,15 @@
 [
   {
-    "path": "/get-start",
-    "name": "get-start",
-    "title": "menu.name.getStart",
+    "path": "/home",
+    "name": "Home",
+    "title": "Home",
     "icon": "el-icon-guide",
     "isAuth": true
   },
   {
-    "path": "/node-list",
-    "name": "node-list",
-    "title": "menu.name.nodeList",
+    "path": "/About",
+    "name": "About",
+    "title": "About",
     "icon": "el-icon-s-operation",
     "isAuth": true
   }

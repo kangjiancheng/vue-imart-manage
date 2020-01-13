@@ -1,11 +1,11 @@
 [
   {
-    "path": "/home",
-    "name": "home"
+    "path": "/Home",
+    "name": "Home"
   },
   {
-    "path": "/about",
-    "name": "about"
+    "path": "/About",
+    "name": "About"
   },
   {
     "path": "/404",

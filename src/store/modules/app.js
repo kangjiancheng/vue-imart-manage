@@ -1,19 +1,20 @@
 import $_api from '@/api'
+import menuList from "@/router/menu"
 
 export default {
   namespaced: true,
 
   state: {
     isCollapseAside: localStorage.getItem('isCollapseAside') === 'true',
-    allMenu: [],
+    menuList: menuList,
   },
 
   getters: {
     isCollapseAside (state) {
       return state.isCollapseAside
     },
-    allMenu (state) {
-      return state.allMenu
+    menuList (state) {
+      return state.menuList
     },
   },
 
@@ -24,14 +25,14 @@ export default {
     },
 
     SET_ALL_MENU (state, payload) {
-      state.menuList = payload.allMenu
+      state.menuList = payload.menuList
     }
   },
 
   actions: {
     SET_ALL_MENU ({ commit }, payload) {
       return new Promise(resolve => {
-        commit('SET_MENU_LIST', {allMenu: payload.allMenu})
+        commit('SET_MENU_LIST', {menuList: payload.menuList})
         resolve()
       })
     },
