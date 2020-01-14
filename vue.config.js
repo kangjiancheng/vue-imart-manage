@@ -30,7 +30,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        // 方便 WebStorm 可以正常识别 @
+        // 方便 WebStorm 可以索引标识符 @ 的路径
         '@': resolve('src')
       }
     }
@@ -44,9 +44,8 @@ module.exports = {
     config.plugin('html').tap(args => {
       // https://cli.vuejs.org/guide/webpack.html#simple-configuration
       if (isProduction) {
-        // 取消build后 文件内容压缩，minify 只在production环境中存在
-        args[0].minify.removeComments = false
-        args[0].minify.collapseWhitespace = false
+        // minify 只在 production 环境中存在
+        args[0].minify.collapseWhitespace = false // 取消 build 后的 index.html 文件内容压缩在一起，
       }
       return args
     })
@@ -61,4 +60,6 @@ module.exports = {
       },
     },
   },
+  // false 时 build 不生成 .map 文件
+  // productionSourceMap: false
 }

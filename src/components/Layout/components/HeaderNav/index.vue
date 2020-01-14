@@ -10,8 +10,8 @@
     <div class="header-right">
 
       <!-- choose language -->
-      <el-dropdown class="lang-dropdown hover-effect" trigger="click" @command="handleCommand">
-        <div class="avatar-wrapper">{{ currentLang || 'Language' }}<i class="el-icon-caret-bottom" /></div>
+      <el-dropdown class="lang-dropdown hover-effect" trigger="click" @command="setLang">
+        <div class="avatar-wrapper">{{ langLabel || 'Languages' }}<i class="el-icon-caret-bottom" /></div>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item v-for="(value, key) in languages" :key="key" :command="key">
             {{ value }}
@@ -31,11 +31,12 @@ export default {
   data() {
     return {
       siteTitle: 'TRON FACTORY',
-      currentLang: '',
+
       languages: {
         'en-US': 'English',
         'zh-CN': '简体中文',
       },
+      langLabel: '',
     }
   },
   components: {
@@ -46,14 +47,14 @@ export default {
   },
   methods: {
     getLang () {
-      let lang = localStorage.getItem('currentLang')
-      this.currentLang = this.languages[lang || 'en-US']
+      let lang = localStorage.getItem('lang')
+      this.langLabel = this.languages[lang] || ''
     },
 
-    handleCommand(val) {
-      this.currentLang = this.languages[val]
-      this.$i18n.locale = val
-      localStorage.setItem('currentLang', val)
+    setLang(lang) {
+      this.langLabel = this.languages[lang] || ''
+      this.$i18n.locale = lang
+      localStorage.setItem('lang', lang)
     },
   },
 }
