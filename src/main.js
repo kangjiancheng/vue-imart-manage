@@ -10,10 +10,10 @@ Vue.use(ElementUI)
 import FontAwesome from './components/FontAwesome'
 Vue.use(FontAwesome)
 
-import './assets/styles/index.scss'
+import './assets/styles/index.scss'           // global
+import './assets/im-iconfont/iconfont.js'  // svg symbol icon
 
-// axios
-import api from './api'
+import api from './api'   // Axios
 Vue.prototype.$_api = api
 
 Vue.config.productionTip = false
