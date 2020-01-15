@@ -9,7 +9,7 @@
     <font-awesome-icon :icon="['fab', 'github']" />
 
     <svg class="im-icon" aria-hidden="true">
-      <use xlink:href="#im-icon-heart-solid"></use>
+      <use xlink:href="#im-icon-heart-solid" />
     </svg>
   </div>
 </template>
