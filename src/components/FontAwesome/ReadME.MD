@@ -11,6 +11,39 @@ yarn add
     @fortawesome/free-brands-svg-icons   
     @fortawesome/vue-fontawesome
 ```
+
+then
+
+```javascript
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome"
+
+import {
+  faUserSecret,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons"    // default fas
+
+import {
+  faAddressBook
+} from "@fortawesome/free-regular-svg-icons"  // far
+
+import {
+  faGithub
+} from "@fortawesome/free-brands-svg-icons"   // fab
+
+
+library.add(
+  // fas
+  faUserSecret,
+  faUserCircle,
+
+  // far
+  faAddressBook,
+
+  // fab
+  faGithub,
+)
+```
 ### Using by Vue component
 ```html
   <font-awesome-icon icon="user-secret" /> <!--default fas -->
