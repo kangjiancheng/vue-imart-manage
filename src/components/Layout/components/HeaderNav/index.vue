@@ -8,6 +8,8 @@
         <svg class="im-icon web-logo" aria-hidden="true">
           <use xlink:href="#im-icon-web-logo" />
         </svg>
+        <i class="iconfont im-icon-web-logo"></i>
+
       </router-link>
     </div>
 

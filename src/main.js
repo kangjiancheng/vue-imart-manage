@@ -11,7 +11,8 @@ import FontAwesome from './components/FontAwesome'
 Vue.use(FontAwesome)
 
 import './assets/styles/index.scss'           // global
-import './assets/im-iconfont/iconfont.js'  // svg symbol icon
+import './assets/im-iconfont/iconfont.css'  // font-class icon
+import './assets/im-iconfont/iconfont.js'  // svg-symbol icon
 
 import api from './api'   // Axios
 Vue.prototype.$_api = api
