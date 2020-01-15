@@ -34,7 +34,6 @@ module.exports = {
         '@': resolve('src')
       }
     },
-    // https://www.webpackjs.com/configuration/performance/
     performance: {
       hints: 'warning', // false 不警告
       maxEntrypointSize: 5 * 1024 * 1024, // 对所有资源 5 MB
@@ -42,10 +41,7 @@ module.exports = {
     }
   },
 
-  // https://cli.vuejs.org/config/#chainwebpack
   chainWebpack: config => {
-    // config.resolve.alias.set('utils', resolve('./utils'))
-
     // https://github.com/jantimon/html-webpack-plugin#options
     config.plugin('html').tap(args => {
       // https://cli.vuejs.org/guide/webpack.html#simple-configuration
@@ -58,7 +54,6 @@ module.exports = {
   },
   css: {
     // 向 CSS 相关的 loader 传递选项
-    // https://cli.vuejs.org/zh/guide/css.html#%E5%90%91%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8-loader-%E4%BC%A0%E9%80%92%E9%80%89%E9%A1%B9
     loaderOptions: {
       // 给 scss-loader 传递选项
       scss: {
