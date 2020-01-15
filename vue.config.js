@@ -33,6 +33,12 @@ module.exports = {
         // 方便 WebStorm 可以索引标识符 @ 的路径
         '@': resolve('src')
       }
+    },
+    // https://www.webpackjs.com/configuration/performance/
+    performance: {
+      hints: 'warning', // false 不警告
+      maxEntrypointSize: 5 * 1024 * 1024, // 对所有资源 5 MB
+      maxAssetSize: 2 * 1024 * 1024 // 对每个生成的文件限制
     }
   },
 
