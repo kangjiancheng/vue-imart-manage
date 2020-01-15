@@ -109,6 +109,20 @@
       "font_class": "fullscreen",
       "unicode": "e617",
       "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "12841927",
+      "name": "setting",
+      "font_class": "setting",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "12842140",
+      "name": "web-logo",
+      "font_class": "web-logo",
+      "unicode": "e619",
+      "unicode_decimal": 58905
     }
   ]
 }

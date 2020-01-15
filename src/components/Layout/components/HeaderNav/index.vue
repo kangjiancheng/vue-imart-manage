@@ -4,7 +4,11 @@
     <hamburger/>
 
     <div class="header-logo">
-      <router-link to="/"><img class="logo-img" src="@/assets/images/logo.png" :title="siteTitle" :alt="siteTitle"/></router-link>
+      <router-link to="/">
+        <svg class="im-icon web-logo" aria-hidden="true">
+          <use xlink:href="#im-icon-web-logo" />
+        </svg>
+      </router-link>
     </div>
 
     <div class="header-right">
@@ -68,9 +72,8 @@ export default {
   background-color: white;
 
   .header-logo {
-    width: 192px;
-    .logo-img {
-      width: 100%;
+    .web-logo {
+      font-size: 40px;
     }
   }
 

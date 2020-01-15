@@ -34,14 +34,13 @@ module.exports = {
         '@': resolve('src')
       }
     },
-    performance: {
-      hints: 'warning', // false 不警告
-      maxEntrypointSize: 5 * 1024 * 1024, // 对所有资源 5 MB
-      maxAssetSize: 2 * 1024 * 1024 // 对每个生成的文件限制
-    }
   },
 
   chainWebpack: config => {
+    if (isProduction) {
+      config.performance.maxEntrypointSize = 5 * 1024 * 1024 // 对所有资源 5 MB
+      config.performance.maxAssetSize = 2 * 1024 * 1024 // 对每个生成的文件限制
+    }
     // https://github.com/jantimon/html-webpack-plugin#options
     config.plugin('html').tap(args => {
       // https://cli.vuejs.org/guide/webpack.html#simple-configuration
