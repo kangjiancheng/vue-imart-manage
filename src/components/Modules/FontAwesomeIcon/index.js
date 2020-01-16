@@ -43,8 +43,5 @@ library.add(
   faGithub,
 )
 
-export default {
-  install (Vue) {
-    Vue.component('font-awesome-icon', FontAwesomeIcon)
-  }
-}
+
+export default FontAwesomeIcon

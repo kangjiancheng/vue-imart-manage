@@ -7,8 +7,8 @@ import i18n from './locale'
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
 
-import FontAwesome from './components/FontAwesome'
-Vue.use(FontAwesome)
+import GlobalComponent from './components/Modules'
+Vue.use(GlobalComponent)
 
 import './assets/styles/index.scss'           // global
 

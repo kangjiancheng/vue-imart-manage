@@ -8,9 +8,8 @@
 
     <font-awesome-icon :icon="['fab', 'github']" />
 
-    <svg class="im-icon" aria-hidden="true">
-      <use xlink:href="#im-icon-heart-solid" />
-    </svg>
+    <svg-sprite-icon icon="im-icon-heart-solid" />
+
   </div>
 </template>
 
