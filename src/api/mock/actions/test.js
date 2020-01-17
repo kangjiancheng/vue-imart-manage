@@ -1,7 +1,5 @@
-import { mock } from "../index";
-
-const mockList = [
-  {
+export default {
+  getUserInfo: {
     rurl: /\/user\/userInfo(\?.*)*/,
     method: 'get',
     data: {
@@ -11,5 +9,4 @@ const mockList = [
       }]
     }
   }
-]
-mockList.forEach(item => mock(item))
+}

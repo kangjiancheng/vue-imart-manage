@@ -5,7 +5,15 @@
 import Mock from "mockjs"
 import { regExpToRegStr } from '@/utils/common'
 
-import './actions/test'
+import test from './actions/test'
+
+const mockAction = {
+  test,
+}
+
+Object.values(mockAction).forEach(actionItem => {
+  Object.values(actionItem).forEach(mockItem => mock(mockItem))
+})
 
 Mock.setup({
   timeout: '200-500',
@@ -21,6 +29,4 @@ export function mock ({rurl, method, data }, success = true) {
 
   Mock.mock(url, method, result)
 }
-
-
 
