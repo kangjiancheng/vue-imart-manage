@@ -1,7 +1,7 @@
 import { mock } from "../index";
 
 mock({
-  rurl: /\/user\/userInfo(\?.*)*/,
+  rurl: /.*\/mockApi\/user\/userInfo(\?.*)*/,
   method: 'get',
   data: {
     'data|5-10': [{

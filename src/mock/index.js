@@ -14,11 +14,9 @@ export function mock ({rurl, method, data }, success = true) {
   const successRes = { error: 0, code: 200, data: 'mock success' }
   const errorRes = { error: 1, code: 404, msg: 'mock fail' }
 
-  const mockPrefix = /.*\/mockApi/
-  let url = new RegExp(regExpToRegStr(mockPrefix) + regExpToRegStr(rurl))
   let result = Object.assign({}, success ? successRes : errorRes, data)
 
-  Mock.mock(url, method, result)
+  Mock.mock(rurl, method, result)
 }
 
 
