@@ -20,3 +20,8 @@ export function initActions(actions) {
   }
   return api
 }
+
+// 获取正则表达式字面量 对应的字符串
+export function regExpToRegStr(regexp) {
+  return regexp.toString().slice(1, -1)
+}

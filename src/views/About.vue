@@ -13,6 +13,28 @@
   </div>
 </template>
 
+<script>
+  export  default {
+    name: 'about',
+    data () {
+      return {
+        mockData: [],
+      }
+    },
+    created () {
+      this.getMockData ()
+    },
+    methods: {
+      getMockData () {
+        this.$_api.test.getUserInfo({ name: 'Tom' }, (err, res) => {
+          console.log('err: ', err)
+          console.log('res: ', res)
+        })
+      }
+    },
+  }
+</script>
+
 <style lang="scss" scoped>
   .about {
     text-align: center;

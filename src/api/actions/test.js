@@ -1,6 +1,8 @@
+const mock = process.env.NODE_ENV === 'development' ? '/mockApi' : ''
+
 export default {
   get: {
-    getUserInfo: '/user/userInfo',
+    getUserInfo: mock + '/user/userInfo',
     login: '/user/login',
   },
   post: {
