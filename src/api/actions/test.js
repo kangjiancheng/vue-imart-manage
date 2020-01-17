@@ -1,8 +1,9 @@
-const mock = process.env.NODE_ENV === 'development' ? '/mockApi' : ''
+import appConfig from '@/app.config'
+const mockApi = appConfig.isDev ? '/mockStatic' : ''
 
 export default {
   get: {
-    getUserInfo: mock + '/user/userInfo',
+    getUserInfo: mockApi + '/user/userInfo',
     login: '/user/login',
   },
   post: {

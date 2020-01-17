@@ -1,14 +1,6 @@
 import Axios from 'axios'
 import { Notification } from 'element-ui'
-
-const isDevelopment = process.env.NODE_ENV !== 'production'
-
-export const proxyMap = {
-  local: '/proxy_local',
-  service: '/proxy_service',
-}
-const currentProxy = 'local'
-export const proxyApi = isDevelopment ? proxyMap[currentProxy] : ''
+import appConfig from '@/app.config'
 
 const $axios = Axios.create({
   headers: {
@@ -18,10 +10,10 @@ const $axios = Axios.create({
   // timeout: 200000,
 })
 
-// if the server responses success, just deal with the useless data
+const baseURL = appConfig.proxying && appConfig.proxyMap[appConfig.proxyKey] || ''
+
 function responseSuccess(response, callback) {
-  console.log(response)
-  if (response.data && (response.data.code < 300 || response.data.code === 304)) {
+  if (response.data && response.data.error === 0) {
     callback(null, response.data.data)
   } else {
     let error_msg = response.data.msg
@@ -30,7 +22,6 @@ function responseSuccess(response, callback) {
   }
 }
 
-// the server responses error or network error
 function responseError(error, callback) {
   let error_msg = '' + error || 'Unknown Error'
   Notification.error({
@@ -47,9 +38,9 @@ export default {
   },
   $http(method, url, params, callback) {
     const config = {
-      baseURL: proxyApi,
-      url: url,
-      method: method,
+      baseURL,
+      url,
+      method,
     }
 
     if (['post', 'put', 'patch'].includes(method)) {
