@@ -26,5 +26,5 @@ export default {
 
 data 数据生成规则：http://mockjs.com/examples.html
 
-mock rurl会自动添加 mockApi 前缀，当请求路径中存在符合 ```/.*\/mockStatic/``` 这个正则表达式时，会进行本地数据mock。
+mock rurl会自动添加 mockApi 前缀，当请求路径中存在符合 ```/.*\/mockStatic/``` 这个正则表达式(或自定义rurlPrefix)时，会进行本地数据mock。
 
