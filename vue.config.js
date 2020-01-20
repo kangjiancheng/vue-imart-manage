@@ -1,7 +1,8 @@
 /**
  * https://cli.vuejs.org/config/
  */
-import appConfig from '@/app.config'
+const appConfig = require('./src/app.config')
+
 const path = require('path')
 function resolve (dir) {
  return  path.resolve(__dirname, dir)

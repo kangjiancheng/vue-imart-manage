@@ -26,7 +26,8 @@
     },
     methods: {
       getMockData () {
-        this.$_api.test.getUserInfo({ name: 'Tom' }, (err, res) => {
+
+        this.$_api.test.getUserInfo({ name: JSON.stringify({age: 'abc'}) }, (err, res) => {
           console.log('err: ', err)
           console.log('res: ', res)
         })

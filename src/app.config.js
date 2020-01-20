@@ -1,5 +1,5 @@
 const isDev = process.env.NODE_ENV === 'development'
-export default {
+module.exports = {
   title: 'imart', // web title
   isDev,
   // app proxy
@@ -8,6 +8,6 @@ export default {
   proxyMap: {  // proxy prefix
     local: '/__local__',
     mock: '/__mock__',
-    service: '/__service__',
+    server: '/__server__',
   },
 }
