@@ -8,6 +8,7 @@
 
     <font-awesome-icon :icon="['fab', 'github']" />
 
+    <i class="iconfont im-icon-web-logo"></i>
     <svg-sprite-icon icon="im-icon-heart-solid" />
 
   </div>
