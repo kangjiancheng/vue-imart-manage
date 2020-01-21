@@ -1,9 +1,9 @@
-import appConfig from '@/app.config'
-const mockApi = appConfig.isDev && false ? '/mockStatic' : ''
+import { getStaticMock } from "@/utils/common";
+const mockPrefix = getStaticMock(true)
 
 export default {
   get: {
-    getUserInfo: mockApi + '/user/userInfo1',
+    getUserInfo: mockPrefix + '/user/userInfo',
     login: '/user/login',
   },
   post: {

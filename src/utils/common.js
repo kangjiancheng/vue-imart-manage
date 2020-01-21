@@ -1,4 +1,5 @@
 import Ajax from '@/utils/ajax'
+import appConfig from '@/app.config'
 
 export function initActions(actions) {
   let api = {}
@@ -19,6 +20,15 @@ export function initActions(actions) {
     }
   }
   return api
+}
+
+/**
+ * 获取本地 mock 的前缀
+ * @param enableMock - 是否开启static mock
+ * @returns {string}
+ */
+export function getStaticMock (enableMock) {
+  return appConfig.staticMock.enable && enableMock ? appConfig.staticMock.prefix : ''
 }
 
 // 获取正则表达式字面量 对应的字符串

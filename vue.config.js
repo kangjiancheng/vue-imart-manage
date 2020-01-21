@@ -1,7 +1,6 @@
 /**
  * https://cli.vuejs.org/config/
  */
-const appConfig = require('./src/app.config')
 
 const path = require('path')
 function resolve (dir) {
@@ -14,11 +13,12 @@ module.exports = {
   // outputDir: isProduction ? '../../resources/static' : 'dist',
   assetsDir: 'assets',
   devServer: {
+    // see ./src/app.config.js proxy attribute for below proxy help
     proxy: {
-      [appConfig.proxyMap.local]: {
+      '__local__': {
         target: 'http://127.0.0.1:8080',
         changeOrigin: true,
-        pathRewrite: { ['^' + appConfig.proxyMap.local]: '' },
+        pathRewrite: { '^__local__': '' },
       },
     },
     host: '127.0.0.1',

@@ -3,6 +3,7 @@
  * http://mockjs.com/examples.html
  */
 import Mock from "mockjs"
+import appConfig from '@/app.config'
 import { regExpToRegStr } from '@/utils/common'
 
 import test from './actions/test'
@@ -21,11 +22,11 @@ Mock.setup({
 
 export function mock ({rurlPrefix, rurl, method, data, }, success = true) {
   const successRes = { error: 0, code: 200, data: 'mock success' }
-  const errorRes = { error: 1, code: 404, msg: 'mock fail' }
+  const failRes = { error: 1, code: 404, msg: 'mock fail' }
 
-  const mockPrefix = rurlPrefix ? rurlPrefix : /.*\/mockStatic/
+  const mockPrefix = rurlPrefix ? rurlPrefix : appConfig.staticMock.regexpPrefix
   let url = new RegExp(regExpToRegStr(mockPrefix) + regExpToRegStr(rurl))
-  let result = Object.assign({}, success ? successRes : errorRes, data)
+  let result = Object.assign({}, success ? successRes : failRes, data)
 
   Mock.mock(url, method, result)
 }

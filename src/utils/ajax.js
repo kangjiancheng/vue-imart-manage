@@ -6,22 +6,22 @@ function responseSuccess(response, callback) {
   if (response.data && response.data.error === 0) {
     callback(null, response.data.data)
   } else {
-    let error_msg = response.data.msg
+    let errorMsg = response.data.msg
 
-    responseFail(error_msg, callback)
+    responseFail(errorMsg, callback)
   }
 }
 
 function responseFail(error, callback) {
-  let error_msg = '' + error || 'Unknown Error'
+  let errorMsg = '' + error || 'Unknown Error'
 
   // TODO 设置字体排列
   Notification.error({
     title: 'Error',
-    message: error_msg,
+    message: errorMsg,
   })
 
-  callback(error_msg)
+  callback(errorMsg)
 }
 
 const $axios = Axios.create({
@@ -32,7 +32,7 @@ const $axios = Axios.create({
   // timeout: 200000,
 })
 
-const baseURL = appConfig.proxying && appConfig.proxyMap[appConfig.proxyKey] || ''
+const baseURL = appConfig.proxy.enableGlobal ? appConfig.proxy.prefixMap[appConfig.proxy.prefixKey] : ''
 
 export default {
   request(config) {
@@ -51,7 +51,7 @@ export default {
       config.params = params
     }
 
-    
+
     this.request(config).then(
       response => responseSuccess(response, callback),
       error => responseFail(error, callback),
