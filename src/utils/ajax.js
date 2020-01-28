@@ -1,14 +1,28 @@
 import Axios from 'axios'
 import { Notification } from 'element-ui'
+import appConfig from '@/app.config'
 
-const isDevelopment = process.env.NODE_ENV !== 'production'
+function responseSuccess(response, callback) {
+  if (response.data && response.data.error === 0) {
+    callback(null, response.data.data)
+  } else {
+    let errorMsg = response.data.msg
 
-export const proxyMap = {
-  local: '/proxy_local',
-  service: '/proxy_service',
+    responseFail(errorMsg, callback)
+  }
 }
-const currentProxy = 'local'
-export const proxyApi = isDevelopment ? proxyMap[currentProxy] : ''
+
+function responseFail(error, callback) {
+  let errorMsg = '' + error || 'Unknown Error'
+
+  // TODO 设置字体排列
+  Notification.error({
+    title: 'Error',
+    message: errorMsg,
+  })
+
+  callback(errorMsg)
+}
 
 const $axios = Axios.create({
   headers: {
@@ -18,27 +32,7 @@ const $axios = Axios.create({
   // timeout: 200000,
 })
 
-// if the server responses success, just deal with the useless data
-function responseSuccess(response, callback) {
-  if (response.data && (response.data.code < 300 || response.data.code === 304)) {
-    callback(null, response.data.data)
-  } else {
-    let error_msg = response.data.msg
-
-    responseError(error_msg, callback)
-  }
-}
-
-// the server responses error or network error
-function responseError(error, callback) {
-  let error_msg = '' + error || 'Unknown Error'
-  Notification.error({
-    title: 'Error',
-    message: error_msg,
-  })
-
-  callback(error_msg)
-}
+const baseURL = appConfig.proxy.enableGlobal ? appConfig.proxy.prefixMap[appConfig.proxy.prefixKey] : ''
 
 export default {
   request(config) {
@@ -46,9 +40,9 @@ export default {
   },
   $http(method, url, params, callback) {
     const config = {
-      baseURL: proxyApi,
-      url: url,
-      method: method,
+      baseURL,
+      url,
+      method,
     }
 
     if (['post', 'put', 'patch'].includes(method)) {
@@ -57,9 +51,10 @@ export default {
       config.params = params
     }
 
+
     this.request(config).then(
       response => responseSuccess(response, callback),
-      error => responseError(error, callback),
+      error => responseFail(error, callback),
     )
   },
   get(url, params, callback) {

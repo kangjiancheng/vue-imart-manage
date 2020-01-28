@@ -7,9 +7,12 @@ import i18n from './locale'
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
 
-import './assets/styles/index.scss'
+import GlobalComponent from './components/Modules'
+Vue.use(GlobalComponent)
 
-import api from './api'
+import './assets/styles/index.scss'  // global
+
+import api from './api'   // Axios
 Vue.prototype.$_api = api
 
 Vue.config.productionTip = false

@@ -1,6 +1,9 @@
+import { getStaticMock } from "@/utils/common";
+const mockPrefix = getStaticMock(true)
+
 export default {
   get: {
-    getUserInfo: '/user/userInfo',
+    getUserInfo: mockPrefix + '/user/userInfo',
     login: '/user/login',
   },
   post: {

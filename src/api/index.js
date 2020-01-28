@@ -1,5 +1,5 @@
+import "./mock"
 import { initActions } from '@/utils/common'
-
 import test from './actions/test'
 
 const actions = {

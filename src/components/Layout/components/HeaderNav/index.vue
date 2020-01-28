@@ -4,14 +4,20 @@
     <hamburger/>
 
     <div class="header-logo">
-      <router-link to="/"><img class="logo-img" src="@/assets/images/logo.png" :title="siteTitle" :alt="siteTitle"/></router-link>
+      <router-link to="/">
+        <svg class="im-icon web-logo" aria-hidden="true">
+          <use xlink:href="#im-icon-web-logo" />
+        </svg>
+        <i class="iconfont im-icon-web-logo"></i>
+
+      </router-link>
     </div>
 
     <div class="header-right">
 
       <!-- choose language -->
-      <el-dropdown class="lang-dropdown hover-effect" trigger="click" @command="handleCommand">
-        <div class="avatar-wrapper">{{ currentLang || 'Language' }}<i class="el-icon-caret-bottom" /></div>
+      <el-dropdown class="lang-dropdown hover-effect" trigger="click" @command="setLang">
+        <div class="avatar-wrapper">{{ langLabel || 'Languages' }}<i class="el-icon-caret-bottom" /></div>
         <el-dropdown-menu slot="dropdown">
           <el-dropdown-item v-for="(value, key) in languages" :key="key" :command="key">
             {{ value }}
@@ -31,11 +37,12 @@ export default {
   data() {
     return {
       siteTitle: 'TRON FACTORY',
-      currentLang: '',
+
       languages: {
         'en-US': 'English',
         'zh-CN': '简体中文',
       },
+      langLabel: '',
     }
   },
   components: {
@@ -46,14 +53,14 @@ export default {
   },
   methods: {
     getLang () {
-      let lang = localStorage.getItem('currentLang')
-      this.currentLang = this.languages[lang || 'en-US']
+      let lang = localStorage.getItem('lang')
+      this.langLabel = this.languages[lang] || ''
     },
 
-    handleCommand(val) {
-      this.currentLang = this.languages[val]
-      this.$i18n.locale = val
-      localStorage.setItem('currentLang', val)
+    setLang(lang) {
+      this.langLabel = this.languages[lang] || ''
+      this.$i18n.locale = lang
+      localStorage.setItem('lang', lang)
     },
   },
 }
@@ -67,9 +74,8 @@ export default {
   background-color: white;
 
   .header-logo {
-    width: 192px;
-    .logo-img {
-      width: 100%;
+    .web-logo {
+      font-size: 40px;
     }
   }
 

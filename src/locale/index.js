@@ -2,25 +2,21 @@
  * http://kazupon.github.io/vue-i18n/
  */
 import Vue from 'vue'
-import locale from 'element-ui/lib/locale'
+import Element from 'element-ui/lib/locale'
 import VueI18n from 'vue-i18n'
-import lang from './lang'
+import langList from './lang'
 
 Vue.use(VueI18n)
 
-let curBrowserLang = navigator.language || navigator.userLanguage
-if (localStorage.getItem('currentLang')) {
-  curBrowserLang = localStorage.getItem('currentLang')
-}
-
-localStorage.setItem('currentLang', curBrowserLang)
+let lang = localStorage.getItem('lang')  || navigator.language || 'en-US'
+localStorage.setItem('lang', lang)
 
 const i18n = new VueI18n({
-  locale: curBrowserLang || 'en-US', // default language
-  messages: lang,
+  locale: lang,
+  messages: langList,
   silentTranslationWarn: true,
 })
 
-locale.i18n((key, value) => i18n.t(key, value)) // for compatible element-ui
+Element.i18n((key, value) => i18n.t(key, value)) // for compatible element-ui
 
 export default i18n

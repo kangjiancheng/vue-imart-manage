@@ -46,4 +46,9 @@ router.beforeEach( async (to, from, next) => {
   }
 })
 
+router.afterEach((to, from) => {
+  // 设置浏览器标题
+  window.document.title = 'imart-manage | ' + to.name
+})
+
 export default router
