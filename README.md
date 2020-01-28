@@ -15,11 +15,13 @@ yarn serve
 yarn build
 ```
 
-## 本地mock
+### Mock
 
 src/api/mock/README.md
 
-## iconfont  使用
+
+### iconfont  使用
+
 #### 引入 阿里巴巴 iconfont
 
 引入 对应iconfont 文件到 public下 im-iconfont
@@ -41,9 +43,20 @@ src/api/mock/README.md
 ```vue
 <font-awesome-icon :icon="['fab', 'github']" />
 ```
-需要先引入font-awesome里的icon对应的组件 ```src/components/Modules/FontAwesomeIcon```，并注册到vue全局。
+需要先引入font-awesome里的icon对应的组件 `src/components/Modules/FontAwesomeIcon`，并注册到vue全局。
 
 
-### Vue-cli Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Ecosystem Reference
+
+This is a list of the project related libraries and resources. 
+
+- [Vue](https://vuejs.org/index.html) the project base framework
+- [Element UI](https://element.eleme.cn/#/zh-CN) base UI
+- [Vue CLI](https://cli.vuejs.org/) vue.config.js
+- [Axios](http://www.axios-js.com/) ajax
+- [i18n](http://kazupon.github.io/vue-i18n/) language help
+- [Mock](https://github.com/nuysoft/Mock/wiki) mock data
+- [fontawesome](https://github.com/FortAwesome/vue-fontawesome) icon 
+- [vue-fontawesome](https://fontawesome.com/) vue fontawesome component icon 
+- [VuePress](https://vuepress.vuejs.org/zh/) help docs setup
 

@@ -8,6 +8,8 @@
     "dev": "vue-cli-service serve --open",
     "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "test": "vue-cli-service build --mode test",
     "stage": "vue-cli-service build --mode stag",
     "prod": "vue-cli-service build --mode prod"
@@ -34,7 +36,8 @@
     "@vue/cli-service": "^4.1.0",
     "sass": "^1.23.7",
     "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.2.0"
   },
   "browserslist": [
     "> 1%",
