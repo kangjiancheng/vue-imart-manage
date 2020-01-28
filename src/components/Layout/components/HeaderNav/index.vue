@@ -14,6 +14,7 @@
     </div>
 
     <div class="header-right">
+      <a class="docs" href="/docs" target="_blank">Document</a>
 
       <!-- choose language -->
       <el-dropdown class="lang-dropdown hover-effect" trigger="click" @command="setLang">
@@ -81,6 +82,11 @@ export default {
 
   .header-right {
     margin: 0 64px 0 auto;
+    .docs {
+      margin-right: 20px;
+      color: font-color();
+      font-size: 14px;
+    }
     .lang-dropdown {
       &.hover-effect {
         cursor: pointer;
