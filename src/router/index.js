@@ -6,7 +6,7 @@ Vue.use(VueRouter)
 /**
  * 获取页面布局风格，并再次设置
  */
-export const layoutList = [ 'MenuInHeader',  'MenuInAside', 'MenuInHeaderAside', ]
+export const layoutList = [ 'MenuHeader',  'MenuAside', 'MenuHeaderAside', ]
 
 export function getLayout() {
   let layout = localStorage.getItem('layout')
@@ -14,12 +14,12 @@ export function getLayout() {
 }
 
 export function setLayout(layout) {
-  if (layoutList.includes(layout)) layout = layoutList[0]
+  if (!layoutList.includes(layout)) layout = layoutList[0]
   localStorage.setItem('layout', layout)
   return layout
 }
 
-const layout = getLayout() // 'MenuInHeader'
+const layout = getLayout() // 'MenuHeader'
 
 // 路由列表
 const vueRoutes = routeList.map(route => Object.assign({

@@ -1,8 +1,5 @@
 <template>
   <div class="header-view header-nav">
-    <!-- toggle aside nav -->
-    <hamburger/>
-
     <div class="header-logo">
       <router-link to="/">
         <svg-sprite-icon class="web-logo" icon="im-icon-web-logo" />
@@ -27,13 +24,9 @@
 </template>
 
 <script>
-import Hamburger from './Hamburger'
 
 export default {
   name: 'header-nav',
-  components: {
-    Hamburger,
-  },
   data() {
     return {
       siteTitle: 'TRON FACTORY',
