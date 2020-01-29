@@ -2,15 +2,61 @@
   {
     "path": "/home",
     "name": "Home",
-    "title": "Home",
+    "label": "Home",
     "icon": "el-icon-guide",
-    "isAuth": true
+    "auth": true
   },
   {
-    "path": "/About",
+    "path": "/about",
     "name": "About",
-    "title": "About",
+    "label": "About",
     "icon": "el-icon-s-operation",
-    "isAuth": true
+    "auth": true
+  },
+  {
+    "path": "/page-a",
+    "name": "page-a",
+    "label": "PageA",
+    "icon": "el-icon-s-operation",
+    "auth": true,
+    "children": [
+      {
+        "path": "/page-b",
+        "name": "page-b",
+        "label": "PageB",
+        "icon": "el-icon-s-operation",
+        "auth": true
+      },
+      {
+        "path": "/page-c",
+        "name": "page-c",
+        "label": "PageC",
+        "icon": "el-icon-s-operation",
+        "auth": true
+      }
+    ]
+  },
+  {
+    "path": "/page-d",
+    "name": "page-d",
+    "label": "PageD",
+    "icon": "el-icon-s-operation",
+    "auth": true,
+    "children": [
+      {
+        "path": "/page-e",
+        "name": "page-e",
+        "label": "PageE",
+        "icon": "el-icon-s-operation",
+        "auth": true
+      },
+      {
+        "path": "/page-f",
+        "name": "page-f",
+        "label": "PageF",
+        "icon": "el-icon-s-operation",
+        "auth": true
+      }
+    ]
   }
 ]

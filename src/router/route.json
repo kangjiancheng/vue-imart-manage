@@ -8,6 +8,30 @@
     "name": "About"
   },
   {
+    "path": "/page-a",
+    "name": "page-a"
+  },
+  {
+    "path": "/page-b",
+    "name": "page-b"
+  },
+  {
+    "path": "/page-c",
+    "name": "page-c"
+  },
+  {
+    "path": "/page-d",
+    "name": "page-d"
+  },
+  {
+    "path": "/page-e",
+    "name": "page-e"
+  },
+  {
+    "path": "/page-f",
+    "name": "page-f"
+  },
+  {
     "path": "/404",
     "name": "404",
     "meta": {

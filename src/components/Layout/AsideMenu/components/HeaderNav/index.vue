@@ -5,16 +5,12 @@
 
     <div class="header-logo">
       <router-link to="/">
-        <svg class="im-icon web-logo" aria-hidden="true">
-          <use xlink:href="#im-icon-web-logo" />
-        </svg>
-        <i class="iconfont im-icon-web-logo"></i>
-
+        <svg-sprite-icon class="web-logo" icon="im-icon-web-logo" />
       </router-link>
     </div>
 
     <div class="header-right">
-      <a class="docs" href="/docs" target="_blank">Document</a>
+      <a class="docs" href="/docs" target="_blank">文档</a>
 
       <!-- choose language -->
       <el-dropdown class="lang-dropdown hover-effect" trigger="click" @command="setLang">
@@ -35,6 +31,9 @@ import Hamburger from './Hamburger'
 
 export default {
   name: 'header-nav',
+  components: {
+    Hamburger,
+  },
   data() {
     return {
       siteTitle: 'TRON FACTORY',
@@ -45,9 +44,6 @@ export default {
       },
       langLabel: '',
     }
-  },
-  components: {
-    Hamburger,
   },
   created () {
     this.getLang()

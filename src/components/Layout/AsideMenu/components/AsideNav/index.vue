@@ -47,7 +47,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import "~@/assets/styles/base";
+@import "~@/assets/styles/base.scss";
 .aside-nav {
   height: 100%;
   background-color: #fff;

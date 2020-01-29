@@ -1,7 +1,7 @@
 <template>
   <el-menu-item :index="routePath" :disabled="menuItem.disabled">
     <i :class="menuItem.icon" />
-    <span slot="title">{{ $t(menuItem.title) }}</span>
+    <span slot="title">{{ $t(menuItem.label) }}</span>
   </el-menu-item>
 </template>
 

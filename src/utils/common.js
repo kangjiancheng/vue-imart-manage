@@ -22,6 +22,7 @@ export function initActions(actions) {
   return api
 }
 
+
 /**
  * 获取本地 mock 的前缀
  * @param enableMock - 是否开启static mock
