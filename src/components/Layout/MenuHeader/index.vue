@@ -30,8 +30,10 @@ export default {
  * 页面框架布局
  */
 .app-header {
+  position: relative;
   height: 60px;
   box-shadow: 0 1px 4px 0 rgba(0,21,41,0.12);
+  z-index: 1;
 }
 
 .app-main {

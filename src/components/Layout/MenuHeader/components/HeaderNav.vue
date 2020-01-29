@@ -1,9 +1,14 @@
 <template>
   <div class="header-view header-nav">
-    <div class="header-logo">
+    <div class="header-left">
       <router-link to="/">
         <svg-sprite-icon class="web-logo" icon="im-icon-web-logo" />
+        <span class="web-name">Vue Imart Manage</span>
       </router-link>
+    </div>
+
+    <div class="header-main">
+      <header-menu />
     </div>
 
     <div class="header-right">
@@ -25,12 +30,12 @@
 
 <script>
 
+import HeaderMenu from "./ImMenu";
 export default {
   name: 'header-nav',
+  components: { HeaderMenu },
   data() {
     return {
-      siteTitle: 'TRON FACTORY',
-
       languages: {
         'en-US': 'English',
         'zh-CN': '简体中文',
@@ -60,29 +65,40 @@ export default {
 .header-nav {
   display: flex;
   align-items: center;
+  padding: 0 40px;
   height: 100%;
   background-color: white;
+}
 
-  .header-logo {
-    .web-logo {
-      font-size: 40px;
-    }
+.header-left {
+  margin-right: 20px;
+  .web-logo {
+    font-size: 32px;
+    vertical-align: middle;
   }
+  .web-name {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #2d2d2d;
+  }
+}
 
-  .header-right {
-    margin: 0 64px 0 auto;
-    .docs {
-      margin-right: 20px;
-      color: font-color();
-      font-size: 14px;
-    }
-    .lang-dropdown {
-      &.hover-effect {
-        cursor: pointer;
-        transition: background 0.3s;
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.025);
-        }
+.header-menu {
+
+}
+
+.header-right {
+  margin-left: auto;
+  .docs {
+    margin-right: 20px;
+    font-size: 14px;
+  }
+  .lang-dropdown {
+    &.hover-effect {
+      cursor: pointer;
+      transition: background 0.3s;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.025);
       }
     }
   }

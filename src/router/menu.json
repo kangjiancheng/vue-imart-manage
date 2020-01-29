@@ -32,24 +32,26 @@
         "name": "page-c",
         "label": "PageC",
         "icon": "el-icon-s-operation",
-        "auth": true
+        "auth": true,
+        "children": [
+          {
+            "path": "/page-d",
+            "name": "page-d",
+            "label": "PageD",
+            "icon": "el-icon-s-operation",
+            "auth": true
+          }
+        ]
       }
     ]
   },
   {
-    "path": "/page-d",
-    "name": "page-d",
-    "label": "PageD",
+    "path": "/page-e",
+    "name": "page-e",
+    "label": "PageE",
     "icon": "el-icon-s-operation",
     "auth": true,
     "children": [
-      {
-        "path": "/page-e",
-        "name": "page-e",
-        "label": "PageE",
-        "icon": "el-icon-s-operation",
-        "auth": true
-      },
       {
         "path": "/page-f",
         "name": "page-f",
