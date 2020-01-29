@@ -8,7 +8,7 @@
     </div>
 
     <div class="header-main">
-      <header-menu />
+      <im-menu />
     </div>
 
     <div class="header-right">
@@ -30,10 +30,10 @@
 
 <script>
 
-import HeaderMenu from "./ImMenu";
+import ImMenu from "./ImMenu";
 export default {
   name: 'header-nav',
-  components: { HeaderMenu },
+  components: { ImMenu },
   data() {
     return {
       languages: {
