@@ -65,7 +65,8 @@ router.beforeEach( async (to, from, next) => {
 
 router.afterEach((to, from) => {
   // 设置浏览器标题
-  window.document.title = 'imart | ' + to.name
+  let title = to.meta && to.meta.title || to.name
+  window.document.title = 'Imart | ' + title
 })
 
 export default router

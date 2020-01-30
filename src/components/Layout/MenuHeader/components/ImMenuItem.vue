@@ -4,7 +4,7 @@
     :index="menuItem.path"
     :disabled="menuItem.disabled">
     <i :class="menuItem.icon" />
-    <span slot="title">{{ $t(menuItem.label) }}</span>
+    <span slot="title">{{ $t(menuItem.title) }}</span>
   </el-menu-item>
 
 
@@ -15,7 +15,7 @@
     :popper-append-to-body="false">
     <template slot="title">
       <i :class="menuItem.icon" />
-      <span>{{ $t(menuItem.label) }}</span>
+      <span>{{ $t(menuItem.title) }}</span>
     </template>
 
     <im-menu-item v-for="(subMenuItem, index) in menuItem.children" :key="index" :menu-item="subMenuItem" />

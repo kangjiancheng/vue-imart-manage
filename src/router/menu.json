@@ -2,42 +2,42 @@
   {
     "path": "/home",
     "name": "Home",
-    "label": "Home",
+    "title": "Home",
     "icon": "el-icon-guide",
     "auth": true
   },
   {
     "path": "/about",
     "name": "About",
-    "label": "About",
+    "title": "About",
     "icon": "el-icon-place",
     "auth": true
   },
   {
     "path": "",
     "name": "page-a",
-    "label": "我们",
+    "title": "我们",
     "icon": "el-icon-place",
     "auth": true,
     "children": [
       {
         "path": "/page-b",
         "name": "page-b",
-        "label": "PageB",
+        "title": "PageB",
         "icon": "el-icon-place",
         "auth": true
       },
       {
         "path": "/page-c",
         "name": "page-c",
-        "label": "PageC",
+        "title": "PageC",
         "icon": "el-icon-place",
         "auth": true,
         "children": [
           {
             "path": "/page-d",
             "name": "page-d",
-            "label": "PageD",
+            "title": "PageD",
             "icon": "el-icon-place",
             "auth": true
           }
@@ -48,14 +48,14 @@
   {
     "path": "/page-e",
     "name": "page-e",
-    "label": "PageE",
+    "title": "PageE",
     "icon": "el-icon-place",
     "auth": true,
     "children": [
       {
         "path": "/page-f",
         "name": "page-f",
-        "label": "PageF",
+        "title": "PageF",
         "icon": "el-icon-place",
         "auth": true
       }
