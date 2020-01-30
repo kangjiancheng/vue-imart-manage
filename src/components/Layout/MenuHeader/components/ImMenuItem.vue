@@ -8,10 +8,14 @@
   </el-menu-item>
 
 
-  <el-submenu v-else :index="menuItem.name" :popper-append-to-body="false">
+  <el-submenu
+    v-else
+    class="im-submenu"
+    :index="menuItem.name"
+    :popper-append-to-body="false">
     <template slot="title">
       <i :class="menuItem.icon" />
-      <span slot="title">{{ $t(menuItem.label) }}</span>
+      <span>{{ $t(menuItem.label) }}</span>
     </template>
 
     <im-menu-item v-for="(subMenuItem, index) in menuItem.children" :key="index" :menu-item="subMenuItem" />
@@ -36,6 +40,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+.im-submenu .el-submenu__title .el-submenu__icon-arrow{
+  margin-top: 3px;
+}
 </style>

@@ -10,35 +10,35 @@
     "path": "/about",
     "name": "About",
     "label": "About",
-    "icon": "el-icon-s-operation",
+    "icon": "el-icon-place",
     "auth": true
   },
   {
-    "path": "/page-a",
+    "path": "",
     "name": "page-a",
-    "label": "PageA",
-    "icon": "el-icon-s-operation",
+    "label": "我们",
+    "icon": "el-icon-place",
     "auth": true,
     "children": [
       {
         "path": "/page-b",
         "name": "page-b",
         "label": "PageB",
-        "icon": "el-icon-s-operation",
+        "icon": "el-icon-place",
         "auth": true
       },
       {
         "path": "/page-c",
         "name": "page-c",
         "label": "PageC",
-        "icon": "el-icon-s-operation",
+        "icon": "el-icon-place",
         "auth": true,
         "children": [
           {
             "path": "/page-d",
             "name": "page-d",
             "label": "PageD",
-            "icon": "el-icon-s-operation",
+            "icon": "el-icon-place",
             "auth": true
           }
         ]
@@ -49,14 +49,14 @@
     "path": "/page-e",
     "name": "page-e",
     "label": "PageE",
-    "icon": "el-icon-s-operation",
+    "icon": "el-icon-place",
     "auth": true,
     "children": [
       {
         "path": "/page-f",
         "name": "page-f",
         "label": "PageF",
-        "icon": "el-icon-s-operation",
+        "icon": "el-icon-place",
         "auth": true
       }
     ]

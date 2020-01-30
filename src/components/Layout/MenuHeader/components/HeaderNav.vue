@@ -80,6 +80,7 @@ export default {
     margin-left: 5px;
     font-size: 16px;
     color: #2d2d2d;
+    vertical-align: middle;
   }
 }
 
