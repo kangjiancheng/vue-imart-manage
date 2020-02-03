@@ -4,7 +4,7 @@ sidebar: false
 heroText: Hero 标题  
 tagline: Hero 副标题  
 
-actionText: 快速上手 →  
+actionText: 开始 →  
 actionLink: /guide/  
 
 features:  
