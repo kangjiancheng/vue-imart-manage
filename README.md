@@ -7,7 +7,7 @@ yarn install
 
 #### Start for development
 ```
-yarn serve
+yarn start
 ```
 
 #### Build for production
@@ -17,8 +17,7 @@ yarn build
 
 ### Mock
 
-src/api/mock/README.md
-
+[local static mock](./src/api/mock/README.md)
 
 ### iconfont  使用
 
