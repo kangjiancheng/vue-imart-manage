@@ -1,8 +1,8 @@
 #开始
 
-1、开启全局 mock：在src/app.config.js 中 设置 ```staticMock.enable = true```，使项目能够支持本地mock。设置一个全局本地mock 开关，可以快速关闭全局mock。
+第一步：开启全局 mock：在[appConfig](../../app.config.js) 中 设置 `staticMock.enable = true`，使项目能够支持本地mock。设置一个全局本地mock 开关，可以快速关闭全局mock。
 
-2、开启单独模块 mock：在对应的实际请求接口文件中 开启mock，进行只针对文件中的接口mock，如：```@/api/actions/test.js```
+第二步：开启单独模块 mock：在对应的实际请求接口文件中 开启mock，针对对应文件中的接口进行mock，如：[test.js](../actions/test.js)
 
 ```javascript
 import { getStaticMock } from "@/utils/common";

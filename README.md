@@ -25,12 +25,12 @@ yarn build
 
 引入 对应iconfont 文件到 public下 im-iconfont
 
-1、通过 font icon 使用： (index.html需先引入：```<link rel="stylesheet" href="./im-iconfont/iconfont.css">```)
+1、通过 font icon 使用： ([index.html](./public/index.html)需先引入：```<link rel="stylesheet" href="./im-iconfont/iconfont.css">```)
 ```html
 <i class="iconfont im-icon-web-logo"></i>
 ```
 
-2、通过svg symbol 使用并定义 vue 组件 (index.html需先引入：``` <script src="./im-iconfont/iconfont.js"></script>```)
+2、通过svg symbol 使用并定义 vue 组件 ([index.html](./public/index.html)需先引入：``` <script src="./im-iconfont/iconfont.js"></script>```)
 ```vue
 <svg-sprite-icon icon="im-icon-web-logo" />
 ```
@@ -42,7 +42,7 @@ yarn build
 ```vue
 <font-awesome-icon :icon="['fab', 'github']" />
 ```
-需要先引入font-awesome里的icon对应的组件 `src/components/Modules/FontAwesomeIcon`，并注册到vue全局。
+需要先引入font-awesome里的icon对应的组件 [FontAwesomeIcon](./src/components/Modules/FontAwesomeIcon/index.js)，并注册到vue全局。
 
 
 ### Ecosystem Reference

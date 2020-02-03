@@ -55,4 +55,4 @@ library.add(
 ### docs
 Vue component using  [vue-fontawesome](https://github.com/FortAwesome/vue-fontawesome)
 
-font-awesome Icons en - [fontawesome](https://fontawesome.com/) and zh - [fontawesome](http://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87)
+font-awesome Icons en - [fontawesome](https://fontawesome.com/) or zh - [fontawesome](http://fa5.dashgame.com/#/%E5%9B%BE%E6%A0%87)
