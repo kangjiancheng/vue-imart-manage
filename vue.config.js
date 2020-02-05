@@ -15,10 +15,10 @@ module.exports = {
   devServer: {
     // see ./src/app.config.js proxy attribute for below proxy help
     proxy: {
-      '__local__': {
+      '/__local__': {
         target: 'http://127.0.0.1:8080',
         changeOrigin: true,
-        pathRewrite: { '^__local__': '' },
+        pathRewrite: { '^/__local__': '' },
       },
     },
     host: '127.0.0.1',
@@ -40,25 +40,31 @@ module.exports = {
 
   chainWebpack: config => {
     if (isProduction) {
+      /**
+       * build 时的性能提示
+       */
       config.performance.maxEntrypointSize = 5 * 1024 * 1024 // 对所有资源 5 MB
       config.performance.maxAssetSize = 2 * 1024 * 1024 // 对每个生成的文件限制
-    }
-    // https://github.com/jantimon/html-webpack-plugin#options
-    config.plugin('html').tap(args => {
-      // https://cli.vuejs.org/guide/webpack.html#simple-configuration
-      if (isProduction) {
+
+      /**
+       * 取消对build后的首页index.html的代码压缩处理
+       */
+      // https://github.com/jantimon/html-webpack-plugin#options
+      config.plugin('html').tap(args => {
+        // https://cli.vuejs.org/guide/webpack.html#simple-configuration
         // minify 只在 production 环境中存在
         args[0].minify.collapseWhitespace = false // 取消 build 后的 index.html 文件内容压缩在一起，
-      }
-      return args
-    })
+        return args
+      })
+    }
+
   },
   css: {
     // 向 CSS 相关的 loader 传递选项
     loaderOptions: {
       // 给 scss-loader 传递选项
       scss: {
-        prependData: `@import "~@/assets/styles/variables.scss";`
+        prependData: `@import "~@/assets/styles/variables.scss";` // 全局变量、函数
       },
     },
   },
