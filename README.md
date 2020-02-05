@@ -6,7 +6,7 @@
 brew install yarn
 ```
 
-#### 安装项目相关第三方依赖库 (install the project related libraries)
+#### 安装依赖库
 ```
 yarn install
 ```
@@ -79,6 +79,80 @@ yarn build
 ```
 
 ## 项目帮助
+
+### API
+
+#### api 规范
+
+请求与响应的处理实现逻辑 [查看](./src/utils/ajax.js)
+
+1、请求数据格式
+
+- get   将参数添加到params，即将参数追加到接口地址后面： searchSomeInfo?id=1
+- post、put 、delete 将参数添加body体中，以json格式传递
+
+2、响应数据格式
+
+请求成功：后端数据处理成功或有进一步要求前端处理其它状况，data属性只能存在 error: 0时；
+
+```json
+{
+  "error": 0,
+  "data": ""
+}
+```
+
+请求失败：后端能接受到该请求时，数据不合后端要求，只是要求前端简单给用户报错。
+
+```json
+{
+  "error": 1,
+  "msg": "错误信息"
+}
+```
+
+#### 使用  
+
+定义对应的接口模块，即创建对应的actions 文件：
+
+```shell script
+src/api
+├── actions
+│   └── test.js
+└── index.js
+```
+
+src/api/actions/test.js : 
+
+```javascript
+export default {
+  get: {
+    getUserInfo: '/user/userInfo',
+  },
+  post: {
+    addUserInfo: '/user/userInfo',
+  },
+  put: {
+    editUserInfo: '/user/userInfo',
+  },
+  delete: {
+    deleteUserInfo: '/user/userInfo',
+  },
+}
+
+``` 
+
+在 [api](./src/api/index.js) 中的actions 引入对应的接口模块，在文件中使用方式：
+
+```javascript
+this.$_api.test.getUserInfo({ name: 'Tom'}, (err, data) => {
+  console.log('err: ', err)
+  if (err) return
+
+  // do something
+  console.log('res: ', data)
+})
+```
 
 ### Mock
 
