@@ -9,7 +9,7 @@ module.exports = {
   host: '127.0.0.1',
   port: '9090',
   dest: 'public/docs', // build dest directory base current project root
-  base: '/docs/',
+  base: '/vue-imart-manage/docs/',
   // https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E9%BB%98%E8%AE%A4%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE
   themeConfig: {
     nav: [

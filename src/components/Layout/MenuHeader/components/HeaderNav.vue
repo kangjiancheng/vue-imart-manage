@@ -38,7 +38,7 @@ export default {
   components: { ImMenu },
   data() {
     return {
-      docsLink: '/docs',
+      docsLink: 'https://kangjiancheng.github.io/vue-imart-manage/docs',
       languages: {
         'en-US': 'English',
         'zh-CN': '简体中文',
