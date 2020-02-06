@@ -1,6 +1,7 @@
 /**
  * https://vuepress.vuejs.org/zh/config/
  */
+console.log(process.env.NODE_ENV)
 
 module.exports = {
   title: 'vue-imart-manage',

@@ -186,6 +186,10 @@ this.$_api.test.getUserInfo({ name: 'Tom'}, (err, data) => {
 需要先引入font-awesome里的icon对应的组件 [FontAwesomeIcon](./src/components/Modules/FontAwesomeIcon/index.js)，并注册到vue全局。
 
 
+### 帮助文档
+
+docs 目前功能暂未完成
+
 ### Ecosystem Reference
 
 This is a list of the project related libraries and resources. 

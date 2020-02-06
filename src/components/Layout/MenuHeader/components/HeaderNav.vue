@@ -36,7 +36,7 @@ export default {
   components: { ImMenu },
   data() {
     return {
-      docsLink: process.env.NODE_ENV === 'production' ? '/vue-imart-manage/docs' : '/docs',
+      docsLink: '/docs',
       languages: {
         'en-US': 'English',
         'zh-CN': '简体中文',

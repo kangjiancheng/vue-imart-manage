@@ -60,5 +60,12 @@
         "auth": true
       }
     ]
+  },
+  {
+    "path": "/404",
+    "name": "404",
+    "title": "404",
+    "icon": "el-icon-place",
+    "auth": false
   }
 ]
