@@ -14,6 +14,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/' },
+      { text: '预览', link: 'https://kangjiancheng.github.io/vue-imart-manage' },
       {
         text: 'Languages',
         items: [
@@ -21,8 +22,9 @@ module.exports = {
           { text: 'English', link: '/language/english/' }
         ]
       },
-      { text: 'GitHub', link: 'https://google.com' },
+      { text: 'GitHub', link: 'https://github.com/kangjiancheng/vue-imart-manage' },
     ],
+
     sidebar: [
       {
         title: '指南',   // 必要的
