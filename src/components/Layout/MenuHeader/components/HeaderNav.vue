@@ -23,6 +23,8 @@
           </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
+
+      <a class="github" href="https://github.com/kangjiancheng/vue-imart-manage" target="_blank"><font-awesome-icon :icon="['fab', 'github']" /></a>
     </div>
 
   </div>
@@ -92,10 +94,11 @@ export default {
 .header-right {
   margin-left: auto;
   .docs {
-    margin-right: 20px;
+    margin-left: 20px;
     font-size: 14px;
   }
   .lang-dropdown {
+    margin-left: 20px;
     &.hover-effect {
       cursor: pointer;
       transition: background 0.3s;
@@ -103,6 +106,9 @@ export default {
         background-color: rgba(0, 0, 0, 0.025);
       }
     }
+  }
+  .github {
+    margin-left: 20px;
   }
 }
 </style>
