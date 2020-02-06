@@ -1,12 +1,12 @@
 # vue-imart-manage
 
-安装 [yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
+### 安装 [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
 ```shell script
 brew install yarn
 ```
 
-#### 安装依赖库
+#### 安装项目依赖库
 ```
 yarn install
 ```
