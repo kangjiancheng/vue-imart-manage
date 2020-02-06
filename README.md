@@ -93,8 +93,8 @@ yarn build
 
 2、响应数据格式
 
-请求成功：后端数据处理成功或有进一步要求前端处理其它状况，data属性只能存在 error: 0时；
-
+请求成功：后端数据处理成功或有进一步要求前端处理其它状况，data属性只能存在 error: 0时。  
+以下为必须字段：
 ```json
 {
   "error": 0,
@@ -102,7 +102,8 @@ yarn build
 }
 ```
 
-请求失败：后端能接受到该请求时，数据不合后端要求，只是要求前端简单给用户报错。
+请求失败：后端能接受到该请求时，数据不合后端要求，只是要求前端简单给用户报错。  
+以下为必须字段：
 
 ```json
 {
@@ -158,11 +159,12 @@ this.$_api.test.getUserInfo({ name: 'Tom'}, (err, data) => {
 
 [local static mock](./src/api/mock/README.md)
 
-### iconfont  使用
+### 引入 iconfont  
 
-#### 引入 阿里巴巴 iconfont
+#### 阿里 [iconfont](https://www.iconfont.cn/)
 
-引入 对应iconfont 文件到 public下 im-iconfont
+引入 对应iconfont 文件到 public下 im-iconfont：  
+（使用im-icon-** 其中前缀 'im-icon' 在创建阿里iconfont的时候定义，默认为'icon-**'）
 
 1、通过 font icon 使用： ([index.html](./public/index.html)需先引入：```<link rel="stylesheet" href="./im-iconfont/iconfont.css">```)
 ```html
