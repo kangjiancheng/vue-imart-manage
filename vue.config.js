@@ -9,8 +9,8 @@ function resolve (dir) {
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  publicPath: '/',
-  // outputDir: isProduction ? '../../resources/static' : 'dist',
+  publicPath: isProduction ? '/vue-imart-manage' : '/',
+  outputDir: isProduction ? '../kangjiancheng.github.io/vue-imart-manage' : 'dist',
   assetsDir: 'assets',
   devServer: {
     // see ./src/app.config.js proxy attribute for below proxy help
@@ -45,7 +45,6 @@ module.exports = {
        */
       config.performance.maxEntrypointSize = 5 * 1024 * 1024 // 对所有资源 5 MB
       config.performance.maxAssetSize = 2 * 1024 * 1024 // 对每个生成的文件限制
-
       /**
        * 取消对build后的首页index.html的代码压缩处理
        */

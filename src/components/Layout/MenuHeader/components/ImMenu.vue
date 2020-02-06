@@ -19,11 +19,13 @@
     components: { ImMenuItem },
     data() {
       return {
-        activeIndex: this.$route.path,
       };
     },
     computed: {
-      ...mapGetters('app', ['menuList'])
+      ...mapGetters('app', ['menuList']),
+      activeIndex () {
+        return this.$route.path
+      }
     },
     methods: {
       handleSelect(index) {

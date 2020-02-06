@@ -1,5 +1,5 @@
 <template>
-  <div class="page-view page-a">
+  <div class="page-a">
     page-a
   </div>
 </template>

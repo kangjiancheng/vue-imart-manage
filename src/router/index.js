@@ -36,7 +36,7 @@ const router = new VueRouter({
     {
       path: '/',
       component: () => import(`@/components/Layout/${layout}`),
-      redirect: routeList[0].name,
+      redirect: { name:routeList[0].name },
       children: [
         ...vueRoutes
       ],

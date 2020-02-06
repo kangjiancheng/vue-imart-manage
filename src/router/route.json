@@ -1,13 +1,13 @@
 [
   {
-    "path": "/Home",
+    "path": "/home",
     "name": "Home",
     "meta": {
       "title": "首页"
     }
   },
   {
-    "path": "/About",
+    "path": "/about",
     "name": "About",
     "meta": {
       "title": "关于"

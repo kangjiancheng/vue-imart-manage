@@ -12,7 +12,7 @@
     </div>
 
     <div class="header-right">
-      <a class="docs" href="/docs" target="_blank">文档</a>
+      <a class="docs" :href="docsLink" target="_blank">帮助文档</a>
 
       <!-- choose language -->
       <el-dropdown class="lang-dropdown hover-effect" trigger="click" @command="setLang">
@@ -36,6 +36,7 @@ export default {
   components: { ImMenu },
   data() {
     return {
+      docsLink: process.env.NODE_ENV === 'production' ? '/vue-imart-manage/docs' : '/docs',
       languages: {
         'en-US': 'English',
         'zh-CN': '简体中文',
