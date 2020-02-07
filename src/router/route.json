@@ -1,9 +1,9 @@
 [
   {
-    "path": "/home",
-    "name": "Home",
+    "path": "/line-chart",
+    "name": "line-chart",
     "meta": {
-      "title": "首页"
+      "title": "折线图"
     }
   },
   {

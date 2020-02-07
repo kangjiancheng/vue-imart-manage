@@ -4,15 +4,20 @@ import router from './router'
 import store from './store'
 import i18n from './locale'
 
+// element-ui
 import ElementUI from 'element-ui'
 Vue.use(ElementUI)
 
 import GlobalComponent from './components/Modules'
 Vue.use(GlobalComponent)
 
-import './assets/styles/index.scss'  // global
+// fontawesome free 5: http://fa5.dashgame.com/
+import '@fortawesome/fontawesome-free/css/all.min.css'
 
-import api from './api'   // Axios
+import './assets/styles/index.scss'
+
+// Axios Ajax
+import api from './api'
 Vue.prototype.$_api = api
 
 Vue.config.productionTip = false

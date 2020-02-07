@@ -1,16 +1,9 @@
 [
   {
-    "path": "/home",
-    "name": "Home",
-    "title": "Home",
-    "icon": "el-icon-guide",
-    "auth": true
-  },
-  {
-    "path": "/about",
-    "name": "About",
-    "title": "About",
-    "icon": "el-icon-place",
+    "path": "/line-chart",
+    "name": "line-chart",
+    "title": "折线图",
+    "icon": "fas fa-chart-line",
     "auth": true
   },
   {
@@ -60,6 +53,13 @@
         "auth": true
       }
     ]
+  },
+  {
+    "path": "/about",
+    "name": "About",
+    "title": "About",
+    "icon": "el-icon-place",
+    "auth": true
   },
   {
     "path": "/404",
