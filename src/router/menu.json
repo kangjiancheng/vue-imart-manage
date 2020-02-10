@@ -1,15 +1,15 @@
 [
   {
-    "path": "/echarts",
-    "name": "echarts",
-    "title": "Echarts 图表",
+    "path": "/vcharts",
+    "name": "vcharts",
+    "title": "Vcharts 图表",
     "icon": "el-icon-pie-chart",
     "auth": true
   },
   {
-    "path": "/vcharts",
-    "name": "vcharts",
-    "title": "Vcharts 图表",
+    "path": "/echarts",
+    "name": "echarts",
+    "title": "Echarts 图表",
     "icon": "el-icon-pie-chart",
     "auth": true
   },

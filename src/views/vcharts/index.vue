@@ -34,7 +34,7 @@ export default {
 
       // echart 配置项： https://www.echartsjs.com/zh/option.html
       echartOption: {
-        colors: ['red', 'blue']
+        colors: ['red', 'blue', 'green']
       }
     }
   }

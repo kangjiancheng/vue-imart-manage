@@ -1,16 +1,16 @@
 [
   {
-    "path": "/echarts",
-    "name": "echarts",
-    "meta": {
-      "title": "echarts图表"
-    }
-  },
-  {
     "path": "/vcharts",
     "name": "vcharts",
     "meta": {
       "title": "vcharts图表"
+    }
+  },
+  {
+    "path": "/echarts",
+    "name": "echarts",
+    "meta": {
+      "title": "echarts图表"
     }
   },
   {
