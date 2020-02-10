@@ -1,6 +1,6 @@
 export default {
   getUserInfo: {
-    rurl: /\/user\/userInfo(\?.*)*/,
+    rurl: /\/api\/user\/userInfo(\?.*)*/,
     method: 'get',
     data: {
       'data|5-10': [{

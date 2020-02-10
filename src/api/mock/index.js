@@ -7,9 +7,11 @@ import appConfig from '@/app.config'
 import { regExpToRegStr } from '@/utils/common'
 
 import test from './actions/test'
+import chart from './actions/chart'
 
 const mockAction = {
   test,
+  chart,
 }
 
 Object.values(mockAction).forEach(actionItem => {
@@ -17,7 +19,7 @@ Object.values(mockAction).forEach(actionItem => {
 })
 
 Mock.setup({
-  timeout: '200-500',
+  timeout: '500-1000',
 })
 
 export function mock ({rurlPrefix, rurl, method, data, }, success = true) {

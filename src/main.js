@@ -16,6 +16,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 
 import './assets/styles/index.scss'
 
+// 引入 echarts: https://www.echartsjs.com/
+import echarts from 'echarts'
+Vue.prototype.$_echarts = echarts
+
+// vcharts: https://v-charts.js.org/
+import VCharts from 'v-charts'
+Vue.use(VCharts)
+
 // Axios Ajax
 import api from './api'
 Vue.prototype.$_api = api

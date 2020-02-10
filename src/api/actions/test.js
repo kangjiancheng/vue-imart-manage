@@ -3,16 +3,16 @@ const mockPrefix = getStaticMock(true)
 
 export default {
   get: {
-    getUserInfo: mockPrefix + '/user/userInfo',
-    login: '/user/login',
+    getUserInfo: mockPrefix + '/api/user/userInfo',
+    login: '/api/user/login',
   },
   post: {
-    addUserInfo: '/user/userInfo',
+    addUserInfo: '/api/user/userInfo',
   },
   put: {
-    editUserInfo: '/user/userInfo',
+    editUserInfo: '/api/user/userInfo',
   },
   delete: {
-    deleteUserInfo: '/user/userInfo',
+    deleteUserInfo: '/api/user/userInfo',
   },
 }

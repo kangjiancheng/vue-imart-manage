@@ -6,9 +6,11 @@
     </div>
 
     <div class="app-main">
-      <transition name="fade" mode="out-in">
-        <router-view class="page-view"/>
-      </transition>
+      <div class="router-view">
+        <transition name="fade" mode="out-in">
+          <router-view />
+        </transition>
+      </div>
     </div>
 
   </div>
@@ -42,7 +44,7 @@ export default {
   overflow: auto;
 }
 
-.page-view {
+.router-view {
   min-height: 100%;
   background-color: white;
 }

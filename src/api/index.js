@@ -1,9 +1,11 @@
 import "./mock"
 import { initActions } from '@/utils/common'
 import test from './actions/test'
+import chart from './actions/chart'
 
 const actions = {
   test,
+  chart,
 }
 
 /**

@@ -1,9 +1,16 @@
 [
   {
-    "path": "/line-chart",
-    "name": "line-chart",
-    "title": "折线图",
-    "icon": "fas fa-chart-line",
+    "path": "/echarts",
+    "name": "echarts",
+    "title": "Echarts 图表",
+    "icon": "el-icon-pie-chart",
+    "auth": true
+  },
+  {
+    "path": "/vcharts",
+    "name": "vcharts",
+    "title": "Vcharts 图表",
+    "icon": "el-icon-pie-chart",
     "auth": true
   },
   {

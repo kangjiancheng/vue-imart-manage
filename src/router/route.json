@@ -1,9 +1,16 @@
 [
   {
-    "path": "/line-chart",
-    "name": "line-chart",
+    "path": "/echarts",
+    "name": "echarts",
     "meta": {
-      "title": "折线图"
+      "title": "echarts图表"
+    }
+  },
+  {
+    "path": "/vcharts",
+    "name": "vcharts",
+    "meta": {
+      "title": "vcharts图表"
     }
   },
   {
