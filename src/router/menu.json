@@ -7,68 +7,6 @@
     "auth": true
   },
   {
-    "path": "/echarts",
-    "name": "echarts",
-    "title": "Echarts 图表",
-    "icon": "el-icon-pie-chart",
-    "auth": true
-  },
-  {
-    "path": "",
-    "name": "page-a",
-    "title": "PageA",
-    "icon": "el-icon-place",
-    "auth": true,
-    "children": [
-      {
-        "path": "/page-b",
-        "name": "page-b",
-        "title": "PageB",
-        "icon": "el-icon-place",
-        "auth": true
-      },
-      {
-        "path": "/page-c",
-        "name": "page-c",
-        "title": "PageC",
-        "icon": "el-icon-place",
-        "auth": true,
-        "children": [
-          {
-            "path": "/page-d",
-            "name": "page-d",
-            "title": "PageD",
-            "icon": "el-icon-place",
-            "auth": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "path": "/page-e",
-    "name": "page-e",
-    "title": "PageE",
-    "icon": "el-icon-place",
-    "auth": true,
-    "children": [
-      {
-        "path": "/page-f",
-        "name": "page-f",
-        "title": "PageF",
-        "icon": "el-icon-place",
-        "auth": true
-      }
-    ]
-  },
-  {
-    "path": "/about",
-    "name": "About",
-    "title": "About",
-    "icon": "el-icon-place",
-    "auth": true
-  },
-  {
     "path": "/404",
     "name": "404",
     "title": "404",

@@ -7,62 +7,6 @@
     }
   },
   {
-    "path": "/echarts",
-    "name": "echarts",
-    "meta": {
-      "title": "echarts图表"
-    }
-  },
-  {
-    "path": "/about",
-    "name": "About",
-    "meta": {
-      "title": "关于"
-    }
-  },
-  {
-    "path": "/page-a",
-    "name": "page-a",
-    "meta": {
-      "title": "PageA"
-    }
-  },
-  {
-    "path": "/page-b",
-    "name": "page-b",
-    "meta": {
-      "title": "PageB"
-    }
-  },
-  {
-    "path": "/page-c",
-    "name": "page-c",
-    "meta": {
-      "title": "PageC"
-    }
-  },
-  {
-    "path": "/page-d",
-    "name": "page-d",
-    "meta": {
-      "title": "PageD"
-    }
-  },
-  {
-    "path": "/page-e",
-    "name": "page-e",
-    "meta": {
-      "title": "PageE"
-    }
-  },
-  {
-    "path": "/page-f",
-    "name": "page-f",
-    "meta": {
-      "title": "PageF"
-    }
-  },
-  {
     "path": "/404",
     "name": "404",
     "meta": {
