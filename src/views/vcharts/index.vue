@@ -34,6 +34,10 @@ export default {
 
       // echart 配置项： https://www.echartsjs.com/zh/option.html
       echartOption: {
+        title: {
+          text: '折线图',
+          subtext: '纯属虚构'
+        },
         colors: ['red', 'blue', 'green']
       }
     }
