@@ -74,7 +74,7 @@ export default {
 
     // 获取图表数据
     getChartData () {
-      this.$_api.chart.getLineChart({}, (err, res) => {
+      this.$_api.chart.getEchartLine({}, (err, res) => {
         if (err) return
         this.chartData = res || []
         this.updateChart()

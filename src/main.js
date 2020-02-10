@@ -23,6 +23,7 @@ Vue.prototype.$_echarts = echarts
 // vcharts: https://v-charts.js.org/
 import VCharts from 'v-charts'
 Vue.use(VCharts)
+import 'v-charts/lib/style.css'
 
 // Axios Ajax
 import api from './api'

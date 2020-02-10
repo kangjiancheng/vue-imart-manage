@@ -3,7 +3,8 @@ const mockPrefix = getStaticMock(true)
 
 export default {
   get: {
-    getLineChart: mockPrefix + '/api/chartInfo',
+    getVchartLine: mockPrefix + '/api/vchart/lineInfo',
+    getEchartLine: mockPrefix + '/api/echart/lineInfo',
   },
   post: {
   },
