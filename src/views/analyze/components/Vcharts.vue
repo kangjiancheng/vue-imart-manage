@@ -26,6 +26,9 @@ export default {
         series (v) {
           v.forEach(i => {
             i.smooth = false // 去掉平滑
+            i.label = {
+              show: true // 显示数值
+            }
           })
           return v
         }
@@ -41,6 +44,7 @@ export default {
         legend: {
           data: []
         },
+
         colors: ['red', 'blue', 'green'],
 
         // 重新设置提示框
@@ -68,7 +72,7 @@ export default {
 
             return html;
           },
-        }
+        },
       },
       loading: false,
       dataEmpty: true
