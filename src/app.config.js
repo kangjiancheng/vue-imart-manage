@@ -14,6 +14,7 @@ export default {
       server: '/__server__', // for remote server
     }
   },
+
   // ./api/mock
   staticMock: {
     enable: true,

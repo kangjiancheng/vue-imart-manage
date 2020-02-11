@@ -9,8 +9,8 @@ function resolve (dir) {
 const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  publicPath: isProduction ? '/vue-imart-manage' : '/',
-  outputDir: isProduction ? '../kangjiancheng.github.io/vue-imart-manage' : 'dist',
+  publicPath: isProduction ? '/prophet-web' : '/',
+  outputDir: isProduction ? '../kangjiancheng.github.io/prophet-web' : 'dist',
   assetsDir: 'assets',
   devServer: {
     // see ./src/app.config.js proxy attribute for below proxy help
