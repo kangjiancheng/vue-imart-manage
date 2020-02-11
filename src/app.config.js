@@ -14,9 +14,10 @@ export default {
       server: '/__server__', // for remote server
     }
   },
-  // ./api/mock
+
+  // 开启静态mock: ./api/mock
   staticMock: {
-    enable: isDev && true,
+    enable: true,
     prefix: '/__staticMock__',  // 添加到请求地址中
     regexpPrefix: /.*\/__staticMock__/, // 添加到 mock 地址匹配中
   },
