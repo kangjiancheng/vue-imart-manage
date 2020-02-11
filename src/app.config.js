@@ -6,7 +6,7 @@ export default {
 
   // app proxy
   proxy: {
-    enableGlobal: isDev && true,  // enable global proxy
+    enableGlobal: isDev && false,  // enable global proxy
     prefixKey: 'local', // current the global proxy， the prefixMap key name
     prefixMap: {
       local: '/__local__',

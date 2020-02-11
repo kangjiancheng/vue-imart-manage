@@ -97,7 +97,7 @@ yarn build
 以下为必须字段：
 ```json
 {
-  "error": 0,
+  "status": 0,
   "data": ""
 }
 ```
@@ -107,7 +107,7 @@ yarn build
 
 ```json
 {
-  "error": 1,
+  "status": 1,
   "msg": "错误信息"
 }
 ```

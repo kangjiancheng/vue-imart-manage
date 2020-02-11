@@ -45,6 +45,8 @@ export default {
 }
 
 .router-view {
+  margin: 0 auto;
+  max-width: 1200px;
   min-height: 100%;
   background-color: white;
 }

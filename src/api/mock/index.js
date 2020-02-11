@@ -7,11 +7,11 @@ import appConfig from '@/app.config'
 import { regExpToRegStr } from '@/utils/common'
 
 import test from './actions/test'
-import chart from './actions/chart'
+import analyze from './actions/analyze'
 
 const mockAction = {
   test,
-  chart,
+  analyze,
 }
 
 Object.values(mockAction).forEach(actionItem => {
@@ -23,8 +23,8 @@ Mock.setup({
 })
 
 export function mock ({rurlPrefix, rurl, method, data, }, success = true) {
-  const successRes = { error: 0, code: 200, data: 'mock success' }
-  const failRes = { error: 1, code: 404, msg: 'mock fail' }
+  const successRes = { status: 0, code: 200, data: 'mock success' }
+  const failRes = { status: 1, code: 404, msg: 'mock fail' }
 
   const mockPrefix = rurlPrefix ? rurlPrefix : appConfig.staticMock.regexpPrefix
   let url = new RegExp(regExpToRegStr(mockPrefix) + regExpToRegStr(rurl))

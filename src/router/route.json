@@ -1,17 +1,16 @@
 [
   {
-    "path": "/vcharts",
-    "name": "vcharts",
+    "path": "/analyze",
+    "name": "analyze",
     "meta": {
-      "title": "vcharts图表"
+      "title": "Analyze"
     }
   },
   {
     "path": "/404",
     "name": "404",
     "meta": {
-      "title": "404",
-      "hideAside": true
+      "title": "404"
     }
   }
 ]

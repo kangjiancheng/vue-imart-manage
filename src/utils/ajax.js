@@ -3,7 +3,7 @@ import { Notification } from 'element-ui'
 import appConfig from '@/app.config'
 
 function responseSuccess(response, callback) {
-  if (response.data && response.data.error === 0) {
+  if (response.data && response.data.status == 0) {
     callback(null, response.data.data)
   } else {
     let errorMsg = response.data.msg

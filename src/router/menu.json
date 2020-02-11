@@ -1,8 +1,8 @@
 [
   {
-    "path": "/vcharts",
-    "name": "vcharts",
-    "title": "Vcharts 图表",
+    "path": "/analyze",
+    "name": "analyze",
+    "title": "Analyze",
     "icon": "el-icon-pie-chart",
     "auth": true
   },
