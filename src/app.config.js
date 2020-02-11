@@ -16,7 +16,7 @@ export default {
   },
   // ./api/mock
   staticMock: {
-    enable: isDev && true,
+    enable: true,
     prefix: '/__staticMock__',  // 添加到请求地址中
     regexpPrefix: /.*\/__staticMock__/, // 添加到 mock 地址匹配中
   },
