@@ -1,9 +1,9 @@
 <template>
   <div class="header-view header-nav">
     <div class="header-left">
-      <router-link to="/">
-        <svg-sprite-icon class="web-logo" icon="im-icon-web-logo" />
-        <span class="web-name">Vue Imart Manage</span>
+      <router-link to="/" class="web-logo">
+        <img class="logo-img" src="@/assets/images/logo.png" :alt="title" />
+        <span class="web-name">{{ title }}</span>
       </router-link>
     </div>
 
@@ -33,11 +33,14 @@
 <script>
 
 import ImMenu from "./ImMenu";
+
+import appConfig from '@/app.config'
 export default {
   name: 'header-nav',
   components: { ImMenu },
   data() {
     return {
+      title: appConfig.title,
       docsLink: 'https://kangjiancheng.github.io/vue-imart-manage/docs',
       languages: {
         'en-US': 'English',
@@ -76,7 +79,10 @@ export default {
 .header-left {
   margin-right: 20px;
   .web-logo {
-    font-size: 32px;
+    vertical-align: middle;
+  }
+  .logo-img {
+    display: inline-block;
     vertical-align: middle;
   }
   .web-name {

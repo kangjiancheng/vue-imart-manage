@@ -1,7 +1,7 @@
 const isDev = process.env.NODE_ENV === 'development'
 
 export default {
-  title: document.title || 'imart-manage', // web title
+  title: document.title || 'Tron', // web title
   isDev,
 
   // app proxy

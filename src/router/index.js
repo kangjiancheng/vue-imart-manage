@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import routeList from "./route"
+import appConfig from '@/app.config'
 Vue.use(VueRouter)
 
 // 路由列表
@@ -48,7 +49,7 @@ router.beforeEach( async (to, from, next) => {
 router.afterEach((to, from) => {
   // 设置浏览器标题
   let title = to.meta && to.meta.title || to.name
-  window.document.title = 'Imart | ' + title
+  window.document.title = appConfig.title +' | ' + title
 })
 
 export default router
