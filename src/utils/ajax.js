@@ -32,7 +32,7 @@ const $axios = Axios.create({
   // timeout: 200000,
 })
 
-const baseURL = appConfig.proxy.enableGlobal ? appConfig.proxy.prefixMap[appConfig.proxy.prefixKey] : ''
+const baseURL = appConfig.proxy.enable ? appConfig.proxy.baseURLs[appConfig.proxy.current] : ''
 
 export default {
   request(config) {

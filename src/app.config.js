@@ -6,9 +6,9 @@ export default {
 
   // app proxy
   proxy: {
-    enableGlobal: isDev && true,  // enable global proxy
-    prefixKey: 'local', // current the global proxy， the prefixMap key name
-    prefixMap: {
+    enable: isDev && true,  // enable global proxy
+    current: 'local', // current the global proxy， the baseURLMap key name
+    baseURLs: {
       local: '/__local__',
       mock: '/__mock__', // for remote mock
       server: '/__server__', // for remote server
