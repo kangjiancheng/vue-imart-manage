@@ -204,4 +204,5 @@ This is a list of the project related libraries and resources.
 - [fontawesome](https://github.com/FortAwesome/vue-fontawesome) icon 
 - [vue-fontawesome](https://fontawesome.com/) vue fontawesome component icon 
 - [VuePress](https://vuepress.vuejs.org/zh/) help docs setup
+- [moment](https://momentjs.com/) Parse, validate, manipulate, and display dates and times in JavaScript.
 

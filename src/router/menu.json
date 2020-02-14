@@ -3,14 +3,14 @@
     "path": "/vcharts",
     "name": "vcharts",
     "title": "Vcharts 图表",
-    "icon": "el-icon-pie-chart",
+    "icon": "el-icon-s-data",
     "auth": true
   },
   {
     "path": "/echarts",
     "name": "echarts",
     "title": "Echarts 图表",
-    "icon": "el-icon-pie-chart",
+    "icon": "el-icon-s-data",
     "auth": true
   },
   {
@@ -62,17 +62,17 @@
     ]
   },
   {
-    "path": "/about",
-    "name": "About",
-    "title": "About",
-    "icon": "el-icon-place",
+    "path": "/example",
+    "name": "Example",
+    "title": "Example",
+    "icon": "el-icon-lollipop",
     "auth": true
   },
   {
     "path": "/404",
     "name": "404",
     "title": "404",
-    "icon": "el-icon-place",
+    "icon": "el-icon-heavy-rain",
     "auth": false
   }
 ]

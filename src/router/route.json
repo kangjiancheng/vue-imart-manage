@@ -14,10 +14,10 @@
     }
   },
   {
-    "path": "/about",
-    "name": "About",
+    "path": "/example",
+    "name": "Example",
     "meta": {
-      "title": "关于"
+      "title": "Example"
     }
   },
   {
