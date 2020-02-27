@@ -4,6 +4,14 @@ import routeList from "./route"
 Vue.use(VueRouter)
 
 /**
+ * 重写路由的push方法
+ */
+const routerPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch(error=> error)
+}
+
+/**
  * 获取页面布局风格，并再次设置
  */
 export const layoutList = [ 'MenuHeader',  'MenuAside', 'MenuHeaderAside', ]
