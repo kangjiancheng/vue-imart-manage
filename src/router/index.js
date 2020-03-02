@@ -30,7 +30,7 @@ export function setLayout(layout) {
 const layout = getLayout() // 'MenuHeader'
 
 // 路由列表
-const vueRoutes = routeList.map(route => Object.assign({
+const layoutRoutes = routeList.map(route => Object.assign({
   path: route.path,
   name: route.name,
   component: () => import(`@/views/${route.name}`),
@@ -46,7 +46,7 @@ const router = new VueRouter({
       component: () => import(`@/components/Layout/${layout}`),
       redirect: { name:routeList[0].name },
       children: [
-        ...vueRoutes
+        ...layoutRoutes
       ],
     },
     {
