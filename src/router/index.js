@@ -17,17 +17,23 @@ VueRouter.prototype.push = function push(location) {
 export const layoutList = [ 'MenuHeader',  'MenuAside', 'MenuHeaderAside', ]
 
 export function getLayout() {
-  let layout = localStorage.getItem('layout')
-  return setLayout(layout)
+  let _layout = localStorage.getItem('layout')
+  if (!layoutList.includes(_layout)) _layout = layoutList[0]
+
+  return setLayout(_layout)
 }
 
 export function setLayout(layout) {
-  if (!layoutList.includes(layout)) layout = layoutList[0]
-  localStorage.setItem('layout', layout)
-  return layout
+  let _layout = localStorage.getItem('layout')
+
+  if (layoutList.includes(layout)) _layout = layout
+  else if (!layoutList.includes(_layout)) _layout = layoutList[0]
+
+  localStorage.setItem('layout', _layout)
+  return _layout
 }
 
-const layout = getLayout() // 'MenuHeader'
+const layout = setLayout('MenuHeader') // 'MenuHeader'
 
 // 路由列表
 const layoutRoutes = routeList.map(route => Object.assign({
