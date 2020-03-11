@@ -10,8 +10,9 @@ export default {
     current: 'local', // current the global proxy， the baseURLMap key name
     baseURLs: {
       local: '/__local__',
-      mock: '/__mock__', // for remote mock
       server: '/__server__', // for remote server
+      mock: '/__mock__', // for remote mock
+      staticMock: '/__staticMock__',
     }
   },
 
