@@ -1,12 +1,14 @@
 /**
  * https://cli.vuejs.org/config/
  */
-
 const path = require('path')
+const execa = require('execa')
+
 function resolve (dir) {
  return  path.resolve(__dirname, dir)
 }
 const isProduction = process.env.NODE_ENV === 'production'
+const branch = execa.sync('git', ['rev-parse', '--abbrev-ref', 'HEAD']).stdout
 
 module.exports = {
   publicPath: isProduction ? '/vue-imart-manage' : '/',
@@ -57,6 +59,13 @@ module.exports = {
       })
     }
 
+    // 设置环境变量： git 当前分支
+    config
+      .plugin('define')
+      .tap(args => {
+        args[0]['process.env.GIT_BRANCH'] = JSON.stringify(branch)
+        return args
+      })
   },
   css: {
     // 向 CSS 相关的 loader 传递选项
