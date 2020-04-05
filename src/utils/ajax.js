@@ -13,15 +13,20 @@ function responseSuccess(response, callback) {
 }
 
 function responseFail(error, callback) {
-  let errorMsg = '' + error || 'Unknown Error'
-
-  // TODO 设置字体排列
+  let errorTitle = 'Error'
+  let errorMsg = '' + (error || 'Exception Error')
+  // current use the default error for java
+  if (error && error.response && error.response.data) {
+    let errorData = error.response.data
+    errorTitle = errorData.error
+    errorMsg = errorData.path + ': ' + errorData.message
+  }
   Notification.error({
-    title: 'Error',
+    title: errorTitle,
     message: errorMsg,
   })
 
-  callback(errorMsg)
+  callback(error)
 }
 
 const $axios = Axios.create({
