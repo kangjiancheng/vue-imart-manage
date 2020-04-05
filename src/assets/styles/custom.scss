@@ -1,7 +1,11 @@
-@import "./base";
-
+/*
 .page-view {
+  margin: 20px;
+  min-height: calc(100% - 40px);
+  width: calc(100% - 40px);
+  background-color: white;
 }
+*/
 
 .box-view {
   padding: 20px;
@@ -20,4 +24,12 @@
 }
 .align-right {
   text-align: right;
+}
+
+.divider-line {
+  display: inline-block;
+  height: 16px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, .2);
+  vertical-align: middle;
 }

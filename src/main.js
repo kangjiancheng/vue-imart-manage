@@ -33,6 +33,8 @@ Vue.prototype.$_api = api
 import GlobalComponent from './components/Modules'
 Vue.use(GlobalComponent)
 
+// $eventBus
+Vue.prototype.$eventBus = new Vue()
 
 Vue.config.productionTip = false
 
