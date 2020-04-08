@@ -4,22 +4,16 @@ export default {
   title: document.title || 'imart-manage', // web title
   isDev,
 
-  // app proxy
+  // 设置全局url前缀
   proxy: {
-    enable: isDev && true,  // enable global proxy
+    enable: isDev && true,
     current: 'local', // current the global proxy， the baseURLMap key name
-    baseURLs: {
+    baseURLs: { // url 前缀列表
       local: '/__local__',
       server: '/__server__', // for remote server
       mock: '/__mock__', // for remote mock
-      staticMock: '/__staticMock__',
-    }
-  },
-
-  // 开启静态mock: ./api/mock
-  staticMock: {
-    enable: true,
-    prefix: '/__staticMock__',  // api接口地址关键字
-    regexpPrefix: /.*\/__staticMock__/, // mock正则表达式前缀
+      staticMock: '/__staticMock__', // 本地静态mock前缀
+    },
+    staticMockPrefix: /.*\/__staticMock__/, // mock 正则表达式前缀
   },
 }

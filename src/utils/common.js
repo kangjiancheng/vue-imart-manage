@@ -24,12 +24,12 @@ export function initActions(actions) {
 
 
 /**
- * 获取本地 mock 的前缀
+ * 设置单独url的mock前缀
  * @param enableMock - 是否开启static mock
  * @returns {string}
  */
-export function getStaticMock (enableMock) {
-  return appConfig.staticMock.enable && enableMock ? appConfig.staticMock.prefix : ''
+export function singleStaticMock (enableMock) {
+  return enableMock ? appConfig.proxy.staticMockPrefix : ''
 }
 
 // 获取正则表达式字面量 对应的字符串
