@@ -1,3 +1,6 @@
+## Ajax
+2020-04-08
+- format the notify message for ajax response error 
 
 ## Document
 
