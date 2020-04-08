@@ -19,7 +19,7 @@ export default {
   // 开启静态mock: ./api/mock
   staticMock: {
     enable: true,
-    prefix: '/__staticMock__',  // 添加到请求地址中
-    regexpPrefix: /.*\/__staticMock__/, // 添加到 mock 地址匹配中
+    prefix: '/__staticMock__',  // api接口地址关键字
+    regexpPrefix: /.*\/__staticMock__/, // mock正则表达式前缀
   },
 }

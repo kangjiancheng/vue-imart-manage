@@ -8,27 +8,35 @@ function responseSuccess(response, callback) {
   if (response.data && response.data.error === 0) {
     callback(null, response.data.data)
   } else {
-    let errorMsg = response.data.msg
+    let error_msg = response.data.msg  || 'Unknown Error'
 
-    responseFail(errorMsg, callback)
+    Notification({
+      type: "error",
+      title: 'ERROR',
+      message: String(error_msg),
+      dangerouslyUseHTMLString: true,
+    })
+    callback(response || {})
   }
 }
 
 function responseFail(error, callback) {
-  let errorTitle = 'Error'
-  let errorMsg = '' + (error || 'Exception Error')
-  // current use the default error for java
+  let errorTitle = 'ERROR'
+  let errorMsg = typeof error === 'object' && error.message || error || 'Unknown Error'
+
   if (error && error.response && error.response.data) {
     let errorData = error.response.data
-    errorTitle = errorData.error
-    errorMsg = errorData.path + ': ' + errorData.message
+    errorTitle = error.response.statusText
+    errorMsg = errorData.message ? (errorData.path + ': ' + errorData.message) : errorData
   }
-  Notification.error({
-    title: errorTitle,
-    message: errorMsg,
-  })
 
-  callback(error)
+  Notification({
+    type: "error",
+    title: String(errorTitle),
+    message: String(errorMsg),
+    dangerouslyUseHTMLString: true,
+  })
+  callback(error && error.response || {})
 }
 
 const $axios = Axios.create({
