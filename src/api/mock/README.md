@@ -1,4 +1,4 @@
-#开始
+# 开始
 
 第一步：开启全局 mock：在[appConfig](../../app.config.js) 中 设置 `staticMock.enable = true`，使项目能够支持本地mock。设置一个全局本地mock 开关，可以快速关闭全局mock。
 
@@ -31,7 +31,7 @@ export default {
 
 
 
-##例子
+## 例子
 
 请求地址：
 

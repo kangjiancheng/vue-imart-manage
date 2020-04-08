@@ -22,16 +22,6 @@ export function initActions(actions) {
   return api
 }
 
-
-/**
- * 设置单独url的mock前缀
- * @param enableMock - 是否开启static mock
- * @returns {string}
- */
-export function singleStaticMock (enableMock) {
-  return enableMock ? appConfig.proxy.staticMockPrefix : ''
-}
-
 // 获取正则表达式字面量 对应的字符串
 export function regExpToRegStr(regexp) {
   return regexp.toString().slice(1, -1)
