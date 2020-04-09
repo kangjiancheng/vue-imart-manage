@@ -4,7 +4,7 @@
  */
 import Mock from "mockjs"
 import appConfig from '@/app.config'
-import { regExpToRegStr } from '@/utils/common'
+import { regExpToRegStr } from '@/utils/util'
 
 import test from './actions/test'
 import chart from './actions/chart'

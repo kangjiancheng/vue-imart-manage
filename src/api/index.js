@@ -1,5 +1,5 @@
 import "./mock"
-import { initActions } from '@/utils/common'
+import { initActions } from '@/utils/util'
 import test from './actions/test'
 import chart from './actions/chart'
 

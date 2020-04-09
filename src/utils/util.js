@@ -26,3 +26,10 @@ export function initActions(actions) {
 export function regExpToRegStr(regexp) {
   return regexp.toString().slice(1, -1)
 }
+
+/**
+ * @return {string}
+ */
+export function transferBigIntToString (value = '') {
+  return String(BigInt(value))
+}
