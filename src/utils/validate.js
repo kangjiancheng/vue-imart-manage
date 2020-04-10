@@ -70,16 +70,16 @@ export class FormRules {
   }
 
   // 对64位长整型数值的校验，如java 数值
-  validLongNumRange (isInteger) {
+  validLongIntRange () {
     return (rule, value, callback) => {
-      let longIntMax = String(BigInt(2**63) - BigInt(1))
-      let longIntMin = String(-BigInt(2**63))
+      let longIntMax = BigInt(2**63) - BigInt(1)
+      let longIntMin = -BigInt(2**63)
 
       let errorMessage = ''
 
       if (!/^(-)?\d+$/.test(value)) errorMessage = '请输入整数'
-      else if (value < 0 && value > longIntMin) errorMessage = '数值低于最小限制: ' + longIntMin
-      else if (value > longIntMax) errorMessage = '数值超过最大限制: ' + longIntMax
+      else if (BigInt(value) < longIntMin) errorMessage = '数值低于最小限制: ' + longIntMin
+      else if (BigInt(value) > longIntMax) errorMessage = '数值超过最大限制: ' + longIntMax
 
       if (errorMessage) callback(new Error(errorMessage))
       else callback()
