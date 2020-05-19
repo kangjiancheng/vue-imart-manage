@@ -1,5 +1,5 @@
 <template>
-  <div class="page-view vcharts">
+  <div class="vcharts">
     <!-- 折线图-->
     <ve-line
       :data="chartData"
@@ -71,6 +71,5 @@ export default {
 
 <style scoped>
 .page-view {
-  padding: 20px;
 }
 </style>

@@ -1,5 +1,4 @@
-import { getStaticMock } from "@/utils/common"
-const mockPrefix = getStaticMock(true)
+const mockPrefix = '/__staticMock__'
 
 export default {
   get: {
