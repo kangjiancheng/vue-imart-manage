@@ -8,7 +8,7 @@ function responseSuccess(response, callback) {
   if (response.data && response.data.error === 0) {
     callback(null, response.data.data)
   } else {
-    let error_msg = response.data.msg  || 'Unknown Error'
+    let error_msg = response.data.msg  || 'error'
 
     Notification({
       type: "error",
@@ -21,14 +21,23 @@ function responseSuccess(response, callback) {
 }
 
 function responseFail(error, callback) {
-  let errorTitle = 'Error'
-  let errorMsg = '' + (error || 'Exception Error')
+  let errorTitle = ''
+  let errorMsg = ''
 
-  if (error && error.response && error.response.data) {
-    let errorData = error.response.data
-    errorTitle = error.response.statusText
-    errorMsg = errorData.message ? (errorData.path + ': ' + errorData.message) : errorData
+  if (typeof error.response === 'object') {
+    // The request was made and the server responded with a status code
+    errorTitle = error.response.status + ' - ' + error.response.statusText
+
+    // 500、 405 e.g
+    if (typeof error.response.data === 'string') {
+      errorMsg = error.response.data
+    } else if (typeof error.response.data === 'object' && error.response.data.message) {
+      let path = error.response.data.path ? ''+ error.response.data.path+': ' : ''
+      errorMsg = path + error.response.data.message
+    }
   }
+  errorTitle = errorTitle || 'ERROR'
+  errorMsg = errorMsg || error.message || 'error'
 
   Notification({
     type: "error",
