@@ -26,7 +26,9 @@ import * as moment from 'moment'
 Vue.prototype.$_moment = moment
 
 // Axios Ajax
+import axios from 'axios'
 import api from './api'
+Vue.prototype.$axios = axios
 Vue.prototype.$_api = api
 
 // auto global component
