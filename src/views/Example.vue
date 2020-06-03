@@ -32,6 +32,7 @@
     data () {
       return {
         mockData: [],
+        cancelHttp: null,
       }
     },
     created () {
@@ -39,13 +40,24 @@
     },
     methods: {
       getMockData () {
-        this.$_api.test.getUserInfo({ name: 'Tom'}, (err, data) => {
+        let self = this
+        this.$_api.test.getUserInfo({ name: 'Tom'}, {
+          cancelToken: new this.$axios.CancelToken(function executor(cancel) {
+            // executor 函数接收一个 cancel 函数作为参数
+            self.cancelHttp = cancel;
+          })
+        }, (err, data) => {
           console.log('err: ', err)
           if (err) return
 
           // do something
           console.log('res: ', data)
         })
+      },
+
+      // 取消 ajax 请求
+      httpCancel () {
+        this.cancelHttp()
       }
     },
   }

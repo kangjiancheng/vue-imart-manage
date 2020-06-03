@@ -60,40 +60,42 @@ export default {
   request(config) {
     return $axios.request(config)
   },
-  $http(method, url, params, callback) {
-    const config = {
+  $http(method, url, params, config, callback) {
+    const _config = {
       url,
       method,
+      ...config,
     }
-
-    // 如果url 像： '/__proxy__/api/getTestInfo' 中存在指定代理列表的字符串 '/__proxy__' 时，会忽略全局的代理
-    let isSingleProxy = Object.values(appConfig.proxy.baseURLs).some(value => ~config.url.indexOf(value))
-    // 指定全局代理的 baseURL
-    if (appConfig.proxy.enable && !isSingleProxy) config.baseURL = appConfig.proxy.baseURLs[appConfig.proxy.current]
-
 
     if (['post', 'put', 'patch'].includes(method)) {
-      config.data = params
+      _config.data = params
     } else {
-      config.params = params
+      _config.params = params
     }
 
 
-    this.request(config).then(
+    // 如果url 像： '/__proxy__/api/getTestInfo' 中存在指定代理列表的字符串 '/__proxy__' 时，会忽略全局的代理
+    let isSingleProxy = Object.values(appConfig.proxy.baseURLs).some(value => ~_config.url.indexOf(value))
+    // 指定全局代理的 baseURL
+    if (appConfig.proxy.enable && !isSingleProxy && !_config.baseURL) {
+      _config.baseURL = appConfig.proxy.baseURLs[appConfig.proxy.current]
+    }
+
+    this.request(_config).then(
       response => responseSuccess(response, callback),
       error => responseFail(error, callback),
     )
   },
-  get(url, params, callback) {
-    this.$http('get', url, params, callback)
+  get(url, params, config, callback) {
+    this.$http('get', url, params, config, callback)
   },
-  post(url, params, callback) {
-    this.$http('post', url, params, callback)
+  post(url, params, config, callback) {
+    this.$http('post', url, params, config, callback)
   },
-  put(url, params, callback) {
-    this.$http('put', url, params, callback)
+  put(url, params, config, callback) {
+    this.$http('put', url, params, config, callback)
   },
   delete(url, params, callback) {
-    this.$http('delete', url, params, callback)
+    this.$http('delete', url, params, config, callback)
   },
 }

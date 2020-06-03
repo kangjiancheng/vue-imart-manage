@@ -1,5 +1,4 @@
 import Ajax from '@/utils/ajax'
-import appConfig from '@/app.config'
 
 export function initActions(actions) {
   let api = {}
@@ -8,11 +7,16 @@ export function initActions(actions) {
 
     for (let method in actions[action]) {
       for (let url in actions[action][method]) {
-        api[action][url] = (params, callback) => {
+        api[action][url] = (params, config = {}, callback) => {
+          if (typeof config === "function") {
+            callback = config
+            config = {}
+          }
           // api url
           Ajax[Ajax[method] ? method : 'get'](
             actions[action][method][url],
             params,
+            config,
             callback,
           )
         }
