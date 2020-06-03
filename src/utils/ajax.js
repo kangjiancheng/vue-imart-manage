@@ -21,12 +21,13 @@ function responseSuccess(response, callback) {
 }
 
 function responseFail(error, callback) {
+  console.dir(error)
   let errorTitle = ''
   let errorMsg = ''
 
   if (typeof error.response === 'object') {
     // The request was made and the server responded with a status code
-    errorTitle = error.response.status + ' - ' + error.response.statusText
+    errorTitle = error.response.status + (error.response.statusText ? (' - ' + error.response.statusText) : '')
 
     // 500、 405 e.g
     if (typeof error.response.data === 'string') {
