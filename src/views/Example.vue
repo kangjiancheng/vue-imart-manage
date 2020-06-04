@@ -45,7 +45,8 @@
           cancelToken: new this.$axios.CancelToken(function executor(cancel) {
             // executor 函数接收一个 cancel 函数作为参数
             self.cancelHttp = cancel;
-          })
+          }),
+          timeout: 20000,
         }, (err, data) => {
           console.log('err: ', err)
           if (err) return
