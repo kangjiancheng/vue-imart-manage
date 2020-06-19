@@ -96,7 +96,7 @@ export default {
   put(url, params, config, callback) {
     this.$http('put', url, params, config, callback)
   },
-  delete(url, params, callback) {
+  delete(url, params, config, callback) {
     this.$http('delete', url, params, config, callback)
   },
 }
