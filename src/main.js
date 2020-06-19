@@ -39,7 +39,7 @@ Vue.use(GlobalComponent)
 /**
  * TODO: GraphQL 待开发
  */
-import apolloProvider from './graphql'
+// import apolloProvider from './graphql'
 
 // $eventBus
 Vue.prototype.$eventBus = new Vue()
@@ -50,6 +50,6 @@ new Vue({
   router,
   store,
   i18n,
-  apolloProvider,
+  // apolloProvider,
   render: h => h(App),
 }).$mount('#app')
