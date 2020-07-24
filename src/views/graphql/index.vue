@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import TASKS_ALL from '@/graphql/api/TasksAll.gql'
+  // import TASKS_ALL from '@/graphql/api/TasksAll.gql'
   export default {
     name: "graphql",
 
@@ -16,14 +16,14 @@
       }
     },
 
-    apollo: {
+    /*apollo: {
       tasks: {
         query: TASKS_ALL,
         update ({ allTasks }) {
           return allTasks
         },
       },
-    },
+    },*/
 
     computed: {
       tasksToDo () {
