@@ -16,14 +16,14 @@
       }
     },
 
-    // apollo: {
-    //   tasks: {
-    //     query: TASKS_ALL,
-    //     update ({ allTasks }) {
-    //       return allTasks
-    //     },
-    //   },
-    // },
+    /*apollo: {
+      tasks: {
+        query: TASKS_ALL,
+        update ({ allTasks }) {
+          return allTasks
+        },
+      },
+    },*/
 
     computed: {
       tasksToDo () {
